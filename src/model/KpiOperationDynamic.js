@@ -59,7 +59,7 @@
       if (data.hasOwnProperty('searchforValue'))
         obj.searchforValue = ApiClient.convertToType(data['searchforValue'], 'String');
       if (data.hasOwnProperty('serchforTimeStampUnix'))
-        obj.serchforTimeStampUnix = ApiClient.convertToType(data['serchforTimeStampUnix'], 'Number');
+        obj.serchforTimeStampUnix = ApiClient.convertToType(data['serchforTimeStampUnix'], 'String');
       if (data.hasOwnProperty('searchforTimeStampIso8601'))
         obj.searchforTimeStampIso8601 = ApiClient.convertToType(data['searchforTimeStampIso8601'], 'String');
     }
@@ -77,7 +77,7 @@
   exports.prototype.searchforValue = undefined;
 
   /**
-   * @member {Number} serchforTimeStampUnix
+   * @member {String} serchforTimeStampUnix
    */
   exports.prototype.serchforTimeStampUnix = undefined;
 

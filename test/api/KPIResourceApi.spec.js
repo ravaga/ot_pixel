@@ -54,15 +54,12 @@
           body.operation = new Otpixel.KpiOperation();
           body.operation.mode = "";
           body.operation.staticMode = new Otpixel.KpiOperationStatic();
-          body.operation.staticMode.unit = "";
           body.operation.staticMode.value = 0.0;
           body.operation.staticMode.lastUpdate = "0";
           body.operation.scheduledMode = new Otpixel.KpiOperationScheduled();
           body.operation.scheduledMode.idRef = "";
           body.operation.scheduledMode.type = "";
           body.operation.scheduledMode.searchforValue = "";
-          body.operation.scheduledMode.serchforTimeStampUnix = "0";
-          body.operation.scheduledMode.searchforTimeStampIso8601 = "";
           body.operation.dynamicMode = new Otpixel.KpiOperationDynamic();
           body.operation.dynamicMode.inputEndPoint = new Otpixel.InputEndpoint();
           body.operation.dynamicMode.inputEndPoint.url = "";
@@ -73,7 +70,7 @@
           body.operation.dynamicMode.inputEndPoint.headers[0].key = "";
           body.operation.dynamicMode.inputEndPoint.headers[0].value = "";
           body.operation.dynamicMode.searchforValue = "";
-          body.operation.dynamicMode.serchforTimeStampUnix = "0";
+          body.operation.dynamicMode.serchforTimeStampUnix = "";
           body.operation.dynamicMode.searchforTimeStampIso8601 = "";
 
           instance.createKPI(body, function(error, data, response) {
@@ -116,9 +113,7 @@
                   expect(data.operation.mode).to.be.a('string');
               expect(data.operation.mode).to.be("");
               expect(data.operation.staticMode).to.be.a(Otpixel.KpiOperationStatic);
-                    expect(data.operation.staticMode.unit).to.be.a('string');
-                expect(data.operation.staticMode.unit).to.be("");
-                expect(data.operation.staticMode.value).to.be.a('number');
+                    expect(data.operation.staticMode.value).to.be.a('number');
                 expect(data.operation.staticMode.value).to.be(0.0);
                 expect(data.operation.staticMode.lastUpdate).to.be.a('number');
                 expect(data.operation.staticMode.lastUpdate).to.be("0");
@@ -129,10 +124,6 @@
                 expect(data.operation.scheduledMode.type).to.be("");
                 expect(data.operation.scheduledMode.searchforValue).to.be.a('string');
                 expect(data.operation.scheduledMode.searchforValue).to.be("");
-                expect(data.operation.scheduledMode.serchforTimeStampUnix).to.be.a('number');
-                expect(data.operation.scheduledMode.serchforTimeStampUnix).to.be("0");
-                expect(data.operation.scheduledMode.searchforTimeStampIso8601).to.be.a('string');
-                expect(data.operation.scheduledMode.searchforTimeStampIso8601).to.be("");
               expect(data.operation.dynamicMode).to.be.a(Otpixel.KpiOperationDynamic);
                     expect(data.operation.dynamicMode.inputEndPoint).to.be.a(Otpixel.InputEndpoint);
                       expect(data.operation.dynamicMode.inputEndPoint.url).to.be.a('string');
@@ -158,8 +149,8 @@
                   }
                 expect(data.operation.dynamicMode.searchforValue).to.be.a('string');
                 expect(data.operation.dynamicMode.searchforValue).to.be("");
-                expect(data.operation.dynamicMode.serchforTimeStampUnix).to.be.a('number');
-                expect(data.operation.dynamicMode.serchforTimeStampUnix).to.be("0");
+                expect(data.operation.dynamicMode.serchforTimeStampUnix).to.be.a('string');
+                expect(data.operation.dynamicMode.serchforTimeStampUnix).to.be("");
                 expect(data.operation.dynamicMode.searchforTimeStampIso8601).to.be.a('string');
                 expect(data.operation.dynamicMode.searchforTimeStampIso8601).to.be("");
 
@@ -235,9 +226,7 @@
                   expect(data.operation.mode).to.be.a('string');
               expect(data.operation.mode).to.be("");
               expect(data.operation.staticMode).to.be.a(Otpixel.KpiOperationStatic);
-                    expect(data.operation.staticMode.unit).to.be.a('string');
-                expect(data.operation.staticMode.unit).to.be("");
-                expect(data.operation.staticMode.value).to.be.a('number');
+                    expect(data.operation.staticMode.value).to.be.a('number');
                 expect(data.operation.staticMode.value).to.be(0.0);
                 expect(data.operation.staticMode.lastUpdate).to.be.a('number');
                 expect(data.operation.staticMode.lastUpdate).to.be("0");
@@ -248,10 +237,6 @@
                 expect(data.operation.scheduledMode.type).to.be("");
                 expect(data.operation.scheduledMode.searchforValue).to.be.a('string');
                 expect(data.operation.scheduledMode.searchforValue).to.be("");
-                expect(data.operation.scheduledMode.serchforTimeStampUnix).to.be.a('number');
-                expect(data.operation.scheduledMode.serchforTimeStampUnix).to.be("0");
-                expect(data.operation.scheduledMode.searchforTimeStampIso8601).to.be.a('string');
-                expect(data.operation.scheduledMode.searchforTimeStampIso8601).to.be("");
               expect(data.operation.dynamicMode).to.be.a(Otpixel.KpiOperationDynamic);
                     expect(data.operation.dynamicMode.inputEndPoint).to.be.a(Otpixel.InputEndpoint);
                       expect(data.operation.dynamicMode.inputEndPoint.url).to.be.a('string');
@@ -277,10 +262,73 @@
                   }
                 expect(data.operation.dynamicMode.searchforValue).to.be.a('string');
                 expect(data.operation.dynamicMode.searchforValue).to.be("");
-                expect(data.operation.dynamicMode.serchforTimeStampUnix).to.be.a('number');
-                expect(data.operation.dynamicMode.serchforTimeStampUnix).to.be("0");
+                expect(data.operation.dynamicMode.serchforTimeStampUnix).to.be.a('string');
+                expect(data.operation.dynamicMode.serchforTimeStampUnix).to.be("");
                 expect(data.operation.dynamicMode.searchforTimeStampIso8601).to.be.a('string');
                 expect(data.operation.dynamicMode.searchforTimeStampIso8601).to.be("");
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
+      describe('getKPILastValueByID', function() {
+        it('should call getKPILastValueByID successfully', function(done) {
+          // TODO: uncomment, update parameter values for getKPILastValueByID call and complete the assertions
+          /*
+          var id = "id_example";
+
+          instance.getKPILastValueByID(id, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a(Otpixel.JsonNode);
+            expect(data._array).to.be.a('boolean');
+            expect(data._array).to.be(false);
+            expect(data._null).to.be.a('boolean');
+            expect(data._null).to.be(false);
+            expect(data._float).to.be.a('boolean');
+            expect(data._float).to.be(false);
+            expect(data.nodeType).to.be.a('string');
+            expect(data.nodeType).to.be("ARRAY");
+            expect(data._number).to.be.a('boolean');
+            expect(data._number).to.be(false);
+            expect(data._object).to.be.a('boolean');
+            expect(data._object).to.be(false);
+            expect(data.missingNode).to.be.a('boolean');
+            expect(data.missingNode).to.be(false);
+            expect(data.bigDecimal).to.be.a('boolean');
+            expect(data.bigDecimal).to.be(false);
+            expect(data.textual).to.be.a('boolean');
+            expect(data.textual).to.be(false);
+            expect(data.integralNumber).to.be.a('boolean');
+            expect(data.integralNumber).to.be(false);
+            expect(data.containerNode).to.be.a('boolean');
+            expect(data.containerNode).to.be(false);
+            expect(data.pojo).to.be.a('boolean');
+            expect(data.pojo).to.be(false);
+            expect(data._short).to.be.a('boolean');
+            expect(data._short).to.be(false);
+            expect(data._double).to.be.a('boolean');
+            expect(data._double).to.be(false);
+            expect(data.bigInteger).to.be.a('boolean');
+            expect(data.bigInteger).to.be(false);
+            expect(data._boolean).to.be.a('boolean');
+            expect(data._boolean).to.be(false);
+            expect(data.binary).to.be.a('boolean');
+            expect(data.binary).to.be(false);
+            expect(data.valueNode).to.be.a('boolean');
+            expect(data.valueNode).to.be(false);
+            expect(data._long).to.be.a('boolean');
+            expect(data._long).to.be(false);
+            expect(data._int).to.be.a('boolean');
+            expect(data._int).to.be(false);
+            expect(data.floatingPointNumber).to.be.a('boolean');
+            expect(data.floatingPointNumber).to.be(false);
 
             done();
           });
@@ -341,9 +389,7 @@
                     expect(data.operation.mode).to.be.a('string');
                 expect(data.operation.mode).to.be("");
                 expect(data.operation.staticMode).to.be.a(Otpixel.KpiOperationStatic);
-                      expect(data.operation.staticMode.unit).to.be.a('string');
-                  expect(data.operation.staticMode.unit).to.be("");
-                  expect(data.operation.staticMode.value).to.be.a('number');
+                      expect(data.operation.staticMode.value).to.be.a('number');
                   expect(data.operation.staticMode.value).to.be(0.0);
                   expect(data.operation.staticMode.lastUpdate).to.be.a('number');
                   expect(data.operation.staticMode.lastUpdate).to.be("0");
@@ -354,10 +400,6 @@
                   expect(data.operation.scheduledMode.type).to.be("");
                   expect(data.operation.scheduledMode.searchforValue).to.be.a('string');
                   expect(data.operation.scheduledMode.searchforValue).to.be("");
-                  expect(data.operation.scheduledMode.serchforTimeStampUnix).to.be.a('number');
-                  expect(data.operation.scheduledMode.serchforTimeStampUnix).to.be("0");
-                  expect(data.operation.scheduledMode.searchforTimeStampIso8601).to.be.a('string');
-                  expect(data.operation.scheduledMode.searchforTimeStampIso8601).to.be("");
                 expect(data.operation.dynamicMode).to.be.a(Otpixel.KpiOperationDynamic);
                       expect(data.operation.dynamicMode.inputEndPoint).to.be.a(Otpixel.InputEndpoint);
                         expect(data.operation.dynamicMode.inputEndPoint.url).to.be.a('string');
@@ -383,8 +425,8 @@
                     }
                   expect(data.operation.dynamicMode.searchforValue).to.be.a('string');
                   expect(data.operation.dynamicMode.searchforValue).to.be("");
-                  expect(data.operation.dynamicMode.serchforTimeStampUnix).to.be.a('number');
-                  expect(data.operation.dynamicMode.serchforTimeStampUnix).to.be("0");
+                  expect(data.operation.dynamicMode.serchforTimeStampUnix).to.be.a('string');
+                  expect(data.operation.dynamicMode.serchforTimeStampUnix).to.be("");
                   expect(data.operation.dynamicMode.searchforTimeStampIso8601).to.be.a('string');
                   expect(data.operation.dynamicMode.searchforTimeStampIso8601).to.be("");
             }
@@ -415,15 +457,12 @@
           body.operation = new Otpixel.KpiOperation();
           body.operation.mode = "";
           body.operation.staticMode = new Otpixel.KpiOperationStatic();
-          body.operation.staticMode.unit = "";
           body.operation.staticMode.value = 0.0;
           body.operation.staticMode.lastUpdate = "0";
           body.operation.scheduledMode = new Otpixel.KpiOperationScheduled();
           body.operation.scheduledMode.idRef = "";
           body.operation.scheduledMode.type = "";
           body.operation.scheduledMode.searchforValue = "";
-          body.operation.scheduledMode.serchforTimeStampUnix = "0";
-          body.operation.scheduledMode.searchforTimeStampIso8601 = "";
           body.operation.dynamicMode = new Otpixel.KpiOperationDynamic();
           body.operation.dynamicMode.inputEndPoint = new Otpixel.InputEndpoint();
           body.operation.dynamicMode.inputEndPoint.url = "";
@@ -434,7 +473,7 @@
           body.operation.dynamicMode.inputEndPoint.headers[0].key = "";
           body.operation.dynamicMode.inputEndPoint.headers[0].value = "";
           body.operation.dynamicMode.searchforValue = "";
-          body.operation.dynamicMode.serchforTimeStampUnix = "0";
+          body.operation.dynamicMode.serchforTimeStampUnix = "";
           body.operation.dynamicMode.searchforTimeStampIso8601 = "";
 
           instance.updateKPI(body, function(error, data, response) {
@@ -477,9 +516,7 @@
                   expect(data.operation.mode).to.be.a('string');
               expect(data.operation.mode).to.be("");
               expect(data.operation.staticMode).to.be.a(Otpixel.KpiOperationStatic);
-                    expect(data.operation.staticMode.unit).to.be.a('string');
-                expect(data.operation.staticMode.unit).to.be("");
-                expect(data.operation.staticMode.value).to.be.a('number');
+                    expect(data.operation.staticMode.value).to.be.a('number');
                 expect(data.operation.staticMode.value).to.be(0.0);
                 expect(data.operation.staticMode.lastUpdate).to.be.a('number');
                 expect(data.operation.staticMode.lastUpdate).to.be("0");
@@ -490,10 +527,6 @@
                 expect(data.operation.scheduledMode.type).to.be("");
                 expect(data.operation.scheduledMode.searchforValue).to.be.a('string');
                 expect(data.operation.scheduledMode.searchforValue).to.be("");
-                expect(data.operation.scheduledMode.serchforTimeStampUnix).to.be.a('number');
-                expect(data.operation.scheduledMode.serchforTimeStampUnix).to.be("0");
-                expect(data.operation.scheduledMode.searchforTimeStampIso8601).to.be.a('string');
-                expect(data.operation.scheduledMode.searchforTimeStampIso8601).to.be("");
               expect(data.operation.dynamicMode).to.be.a(Otpixel.KpiOperationDynamic);
                     expect(data.operation.dynamicMode.inputEndPoint).to.be.a(Otpixel.InputEndpoint);
                       expect(data.operation.dynamicMode.inputEndPoint.url).to.be.a('string');
@@ -519,8 +552,8 @@
                   }
                 expect(data.operation.dynamicMode.searchforValue).to.be.a('string');
                 expect(data.operation.dynamicMode.searchforValue).to.be("");
-                expect(data.operation.dynamicMode.serchforTimeStampUnix).to.be.a('number');
-                expect(data.operation.dynamicMode.serchforTimeStampUnix).to.be("0");
+                expect(data.operation.dynamicMode.serchforTimeStampUnix).to.be.a('string');
+                expect(data.operation.dynamicMode.serchforTimeStampUnix).to.be("");
                 expect(data.operation.dynamicMode.searchforTimeStampIso8601).to.be.a('string');
                 expect(data.operation.dynamicMode.searchforTimeStampIso8601).to.be("");
 

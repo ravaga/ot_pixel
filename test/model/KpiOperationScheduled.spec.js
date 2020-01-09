@@ -58,18 +58,6 @@
         // expect(instance.searchforValue).to.be(expectedValueLiteral);
       });
 
-      it('should have the property serchforTimeStampUnix (base name: "serchforTimeStampUnix")', function() {
-        // TODO: update the code to test the property serchforTimeStampUnix
-        expect(instance).to.have.property('serchforTimeStampUnix');
-        // expect(instance.serchforTimeStampUnix).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property searchforTimeStampIso8601 (base name: "searchforTimeStampIso8601")', function() {
-        // TODO: update the code to test the property searchforTimeStampIso8601
-        expect(instance).to.have.property('searchforTimeStampIso8601');
-        // expect(instance.searchforTimeStampIso8601).to.be(expectedValueLiteral);
-      });
-
     });
   });
 

@@ -52,12 +52,6 @@
         // expect(instance._null).to.be(expectedValueLiteral);
       });
 
-      it('should have the property _int (base name: "int")', function() {
-        // TODO: update the code to test the property _int
-        expect(instance).to.have.property('_int');
-        // expect(instance._int).to.be(expectedValueLiteral);
-      });
-
       it('should have the property _float (base name: "float")', function() {
         // TODO: update the code to test the property _float
         expect(instance).to.have.property('_float');
@@ -76,66 +70,6 @@
         // expect(instance._number).to.be(expectedValueLiteral);
       });
 
-      it('should have the property valueNode (base name: "valueNode")', function() {
-        // TODO: update the code to test the property valueNode
-        expect(instance).to.have.property('valueNode');
-        // expect(instance.valueNode).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property _double (base name: "double")', function() {
-        // TODO: update the code to test the property _double
-        expect(instance).to.have.property('_double');
-        // expect(instance._double).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property _short (base name: "short")', function() {
-        // TODO: update the code to test the property _short
-        expect(instance).to.have.property('_short');
-        // expect(instance._short).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property containerNode (base name: "containerNode")', function() {
-        // TODO: update the code to test the property containerNode
-        expect(instance).to.have.property('containerNode');
-        // expect(instance.containerNode).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property _boolean (base name: "boolean")', function() {
-        // TODO: update the code to test the property _boolean
-        expect(instance).to.have.property('_boolean');
-        // expect(instance._boolean).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property textual (base name: "textual")', function() {
-        // TODO: update the code to test the property textual
-        expect(instance).to.have.property('textual');
-        // expect(instance.textual).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property bigInteger (base name: "bigInteger")', function() {
-        // TODO: update the code to test the property bigInteger
-        expect(instance).to.have.property('bigInteger');
-        // expect(instance.bigInteger).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property bigDecimal (base name: "bigDecimal")', function() {
-        // TODO: update the code to test the property bigDecimal
-        expect(instance).to.have.property('bigDecimal');
-        // expect(instance.bigDecimal).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property binary (base name: "binary")', function() {
-        // TODO: update the code to test the property binary
-        expect(instance).to.have.property('binary');
-        // expect(instance.binary).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property _long (base name: "long")', function() {
-        // TODO: update the code to test the property _long
-        expect(instance).to.have.property('_long');
-        // expect(instance._long).to.be(expectedValueLiteral);
-      });
-
       it('should have the property _object (base name: "object")', function() {
         // TODO: update the code to test the property _object
         expect(instance).to.have.property('_object');
@@ -148,16 +82,82 @@
         // expect(instance.missingNode).to.be(expectedValueLiteral);
       });
 
-      it('should have the property pojo (base name: "pojo")', function() {
-        // TODO: update the code to test the property pojo
-        expect(instance).to.have.property('pojo');
-        // expect(instance.pojo).to.be(expectedValueLiteral);
+      it('should have the property bigDecimal (base name: "bigDecimal")', function() {
+        // TODO: update the code to test the property bigDecimal
+        expect(instance).to.have.property('bigDecimal');
+        // expect(instance.bigDecimal).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property textual (base name: "textual")', function() {
+        // TODO: update the code to test the property textual
+        expect(instance).to.have.property('textual');
+        // expect(instance.textual).to.be(expectedValueLiteral);
       });
 
       it('should have the property integralNumber (base name: "integralNumber")', function() {
         // TODO: update the code to test the property integralNumber
         expect(instance).to.have.property('integralNumber');
         // expect(instance.integralNumber).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property containerNode (base name: "containerNode")', function() {
+        // TODO: update the code to test the property containerNode
+        expect(instance).to.have.property('containerNode');
+        // expect(instance.containerNode).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property pojo (base name: "pojo")', function() {
+        // TODO: update the code to test the property pojo
+        expect(instance).to.have.property('pojo');
+        // expect(instance.pojo).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property _short (base name: "short")', function() {
+        // TODO: update the code to test the property _short
+        expect(instance).to.have.property('_short');
+        // expect(instance._short).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property _double (base name: "double")', function() {
+        // TODO: update the code to test the property _double
+        expect(instance).to.have.property('_double');
+        // expect(instance._double).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property bigInteger (base name: "bigInteger")', function() {
+        // TODO: update the code to test the property bigInteger
+        expect(instance).to.have.property('bigInteger');
+        // expect(instance.bigInteger).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property _boolean (base name: "boolean")', function() {
+        // TODO: update the code to test the property _boolean
+        expect(instance).to.have.property('_boolean');
+        // expect(instance._boolean).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property binary (base name: "binary")', function() {
+        // TODO: update the code to test the property binary
+        expect(instance).to.have.property('binary');
+        // expect(instance.binary).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property valueNode (base name: "valueNode")', function() {
+        // TODO: update the code to test the property valueNode
+        expect(instance).to.have.property('valueNode');
+        // expect(instance.valueNode).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property _long (base name: "long")', function() {
+        // TODO: update the code to test the property _long
+        expect(instance).to.have.property('_long');
+        // expect(instance._long).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property _int (base name: "int")', function() {
+        // TODO: update the code to test the property _int
+        expect(instance).to.have.property('_int');
+        // expect(instance._int).to.be(expectedValueLiteral);
       });
 
       it('should have the property floatingPointNumber (base name: "floatingPointNumber")', function() {

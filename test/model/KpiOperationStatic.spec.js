@@ -40,12 +40,6 @@
         expect(instance).to.be.a(Otpixel.KpiOperationStatic);
       });
 
-      it('should have the property unit (base name: "unit")', function() {
-        // TODO: update the code to test the property unit
-        expect(instance).to.have.property('unit');
-        // expect(instance.unit).to.be(expectedValueLiteral);
-      });
-
       it('should have the property value (base name: "value")', function() {
         // TODO: update the code to test the property value
         expect(instance).to.have.property('value');

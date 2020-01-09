@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/KPI'], factory);
+    define(['ApiClient', 'model/JsonNode', 'model/KPI'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/KPI'));
+    module.exports = factory(require('../ApiClient'), require('../model/JsonNode'), require('../model/KPI'));
   } else {
     // Browser globals (root is window)
     if (!root.Otpixel) {
       root.Otpixel = {};
     }
-    root.Otpixel.KPIResourceApi = factory(root.Otpixel.ApiClient, root.Otpixel.KPI);
+    root.Otpixel.KPIResourceApi = factory(root.Otpixel.ApiClient, root.Otpixel.JsonNode, root.Otpixel.KPI);
   }
-}(this, function(ApiClient, KPI) {
+}(this, function(ApiClient, JsonNode, KPI) {
   'use strict';
 
   /**
@@ -184,6 +184,54 @@
 
       return this.apiClient.callApi(
         '/kpis/get/{id}', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getKPILastValueByID operation.
+     * @callback module:api/KPIResourceApi~getKPILastValueByIDCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/JsonNode} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get the last value of a KPI by id
+     * 
+     * @param {String} id kpi
+     * @param {module:api/KPIResourceApi~getKPILastValueByIDCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/JsonNode}
+     */
+    this.getKPILastValueByID = function(id, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling getKPILastValueByID");
+      }
+
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['apikey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = JsonNode;
+
+      return this.apiClient.callApi(
+        '/kpis/get/{id}/lastValue', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

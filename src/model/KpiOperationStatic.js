@@ -54,8 +54,6 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('unit'))
-        obj.unit = ApiClient.convertToType(data['unit'], 'String');
       if (data.hasOwnProperty('value'))
         obj.value = ApiClient.convertToType(data['value'], 'Number');
       if (data.hasOwnProperty('lastUpdate'))
@@ -63,11 +61,6 @@
     }
     return obj;
   }
-
-  /**
-   * @member {String} unit
-   */
-  exports.prototype.unit = undefined;
 
   /**
    * @member {Number} value

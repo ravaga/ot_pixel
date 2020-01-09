@@ -64,24 +64,24 @@
           var body = new Otpixel.JsonNode();
           body._array = false;
           body._null = false;
-          body._int = false;
           body._float = false;
           body.nodeType = "ARRAY";
           body._number = false;
-          body.valueNode = false;
-          body._double = false;
-          body._short = false;
-          body.containerNode = false;
-          body._boolean = false;
-          body.textual = false;
-          body.bigInteger = false;
-          body.bigDecimal = false;
-          body.binary = false;
-          body._long = false;
           body._object = false;
           body.missingNode = false;
-          body.pojo = false;
+          body.bigDecimal = false;
+          body.textual = false;
           body.integralNumber = false;
+          body.containerNode = false;
+          body.pojo = false;
+          body._short = false;
+          body._double = false;
+          body.bigInteger = false;
+          body._boolean = false;
+          body.binary = false;
+          body.valueNode = false;
+          body._long = false;
+          body._int = false;
           body.floatingPointNumber = false;
 
           instance.postDummyService(body, function(error, data, response) {

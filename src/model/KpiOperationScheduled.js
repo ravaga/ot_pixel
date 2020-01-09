@@ -60,10 +60,6 @@
         obj.type = ApiClient.convertToType(data['type'], 'String');
       if (data.hasOwnProperty('searchforValue'))
         obj.searchforValue = ApiClient.convertToType(data['searchforValue'], 'String');
-      if (data.hasOwnProperty('serchforTimeStampUnix'))
-        obj.serchforTimeStampUnix = ApiClient.convertToType(data['serchforTimeStampUnix'], 'Number');
-      if (data.hasOwnProperty('searchforTimeStampIso8601'))
-        obj.searchforTimeStampIso8601 = ApiClient.convertToType(data['searchforTimeStampIso8601'], 'String');
     }
     return obj;
   }
@@ -82,16 +78,6 @@
    * @member {String} searchforValue
    */
   exports.prototype.searchforValue = undefined;
-
-  /**
-   * @member {Number} serchforTimeStampUnix
-   */
-  exports.prototype.serchforTimeStampUnix = undefined;
-
-  /**
-   * @member {String} searchforTimeStampIso8601
-   */
-  exports.prototype.searchforTimeStampIso8601 = undefined;
 
   return exports;
 
