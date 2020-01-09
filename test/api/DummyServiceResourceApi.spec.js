@@ -67,21 +67,21 @@
           body._float = false;
           body.nodeType = "ARRAY";
           body._number = false;
-          body._object = false;
-          body.missingNode = false;
+          body._int = false;
           body.bigDecimal = false;
+          body.valueNode = false;
           body.textual = false;
-          body.integralNumber = false;
-          body.containerNode = false;
+          body.binary = false;
           body.pojo = false;
-          body._short = false;
+          body.integralNumber = false;
+          body._long = false;
           body._double = false;
           body.bigInteger = false;
+          body._object = false;
+          body._short = false;
+          body.containerNode = false;
+          body.missingNode = false;
           body._boolean = false;
-          body.binary = false;
-          body.valueNode = false;
-          body._long = false;
-          body._int = false;
           body.floatingPointNumber = false;
 
           instance.postDummyService(body, function(error, data, response) {

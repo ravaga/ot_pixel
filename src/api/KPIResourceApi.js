@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/JsonNode', 'model/KPI'], factory);
+    define(['ApiClient', 'model/KPI', 'model/LastKPI'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/JsonNode'), require('../model/KPI'));
+    module.exports = factory(require('../ApiClient'), require('../model/KPI'), require('../model/LastKPI'));
   } else {
     // Browser globals (root is window)
     if (!root.Otpixel) {
       root.Otpixel = {};
     }
-    root.Otpixel.KPIResourceApi = factory(root.Otpixel.ApiClient, root.Otpixel.JsonNode, root.Otpixel.KPI);
+    root.Otpixel.KPIResourceApi = factory(root.Otpixel.ApiClient, root.Otpixel.KPI, root.Otpixel.LastKPI);
   }
-}(this, function(ApiClient, JsonNode, KPI) {
+}(this, function(ApiClient, KPI, LastKPI) {
   'use strict';
 
   /**
@@ -193,7 +193,7 @@
      * Callback function to receive the result of the getKPILastValueByID operation.
      * @callback module:api/KPIResourceApi~getKPILastValueByIDCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/JsonNode} data The data returned by the service call.
+     * @param {module:model/LastKPI} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -202,7 +202,7 @@
      * 
      * @param {String} id kpi
      * @param {module:api/KPIResourceApi~getKPILastValueByIDCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/JsonNode}
+     * data is of type: {@link module:model/LastKPI}
      */
     this.getKPILastValueByID = function(id, callback) {
       var postBody = null;
@@ -228,7 +228,7 @@
       var authNames = ['apikey'];
       var contentTypes = [];
       var accepts = ['application/json'];
-      var returnType = JsonNode;
+      var returnType = LastKPI;
 
       return this.apiClient.callApi(
         '/kpis/get/{id}/lastValue', 'GET',

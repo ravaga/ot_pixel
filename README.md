@@ -188,6 +188,7 @@ Class | Method | HTTP request | Description
  - [Otpixel.KpiOperationScheduled](docs/KpiOperationScheduled.md)
  - [Otpixel.KpiOperationStatic](docs/KpiOperationStatic.md)
  - [Otpixel.KpiThresholds](docs/KpiThresholds.md)
+ - [Otpixel.LastKPI](docs/LastKPI.md)
  - [Otpixel.Model](docs/Model.md)
  - [Otpixel.OTConfig](docs/OTConfig.md)
  - [Otpixel.Port](docs/Port.md)

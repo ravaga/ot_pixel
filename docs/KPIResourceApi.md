@@ -173,7 +173,7 @@ Name | Type | Description  | Notes
 
 <a name="getKPILastValueByID"></a>
 # **getKPILastValueByID**
-> JsonNode getKPILastValueByID(id)
+> LastKPI getKPILastValueByID(id)
 
 Get the last value of a KPI by id
 
@@ -213,7 +213,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**JsonNode**](JsonNode.md)
+[**LastKPI**](LastKPI.md)
 
 ### Authorization
 
