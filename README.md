@@ -140,13 +140,12 @@ Class | Method | HTTP request | Description
 *Otpixel.KPIResourceApi* | [**deleteKPI**](docs/KPIResourceApi.md#deleteKPI) | **DELETE** /kpis/delete/{id} | Delete a kpi
 *Otpixel.KPIResourceApi* | [**getKPIByID**](docs/KPIResourceApi.md#getKPIByID) | **GET** /kpis/get/{id} | Get a KPI by id
 *Otpixel.KPIResourceApi* | [**getKPILastValueByID**](docs/KPIResourceApi.md#getKPILastValueByID) | **GET** /kpis/get/{id}/lastValue | Get the last value of a KPI by id
+*Otpixel.KPIResourceApi* | [**getKPILastValuesByID**](docs/KPIResourceApi.md#getKPILastValuesByID) | **GET** /kpis/get/{id}/lastValues | Get the last value of a KPI by id
 *Otpixel.KPIResourceApi* | [**listKPIs**](docs/KPIResourceApi.md#listKPIs) | **GET** /kpis/list | List all models
 *Otpixel.KPIResourceApi* | [**updateKPI**](docs/KPIResourceApi.md#updateKPI) | **POST** /kpis/update | Update a kpi
 *Otpixel.ModelResourceApi* | [**createModel**](docs/ModelResourceApi.md#createModel) | **PUT** /models/create | Create a model
 *Otpixel.ModelResourceApi* | [**deleteModel**](docs/ModelResourceApi.md#deleteModel) | **DELETE** /models/delete/{id} | Delete a model
 *Otpixel.ModelResourceApi* | [**getModel**](docs/ModelResourceApi.md#getModel) | **GET** /models/get/{id} | Get a model by id
-*Otpixel.ModelResourceApi* | [**getModelInfo**](docs/ModelResourceApi.md#getModelInfo) | **GET** /models/get/{id}/info | Get the status of a model by id
-*Otpixel.ModelResourceApi* | [**getModelStatus**](docs/ModelResourceApi.md#getModelStatus) | **GET** /models/get/{id}/status | Get the status of a model by id
 *Otpixel.ModelResourceApi* | [**listModels**](docs/ModelResourceApi.md#listModels) | **GET** /models/list | List all models
 *Otpixel.ModelResourceApi* | [**updateModel**](docs/ModelResourceApi.md#updateModel) | **POST** /models/update | Update a model
 *Otpixel.PortResourceApi* | [**createPort**](docs/PortResourceApi.md#createPort) | **PUT** /ports/create | Create an port

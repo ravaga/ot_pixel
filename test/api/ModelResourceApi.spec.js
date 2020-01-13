@@ -50,6 +50,9 @@
           body.urls.serviceUrl = "";
           body.urls.dockerImageUrl = "";
           body.urls.dashboardUrl = "";
+          body.urls.statusUrl = "";
+          body.urls.infoUrl = "";
+          body.operation = "";
           body.creation = "0";
           body.ports = [""];
           body.schedulable = false;
@@ -58,7 +61,9 @@
           body.inputDatasources[0].description = "";
           body.inputDatasources[0].serviceUrl = "";
           body.inputFormat = "";
+          body.inputType = "";
           body.outputFormat = "";
+          body.outputType = "";
           body.cpu = "";
           body.ram = "";
           body.status = "";
@@ -91,6 +96,12 @@
               expect(data.urls.dockerImageUrl).to.be("");
               expect(data.urls.dashboardUrl).to.be.a('string');
               expect(data.urls.dashboardUrl).to.be("");
+              expect(data.urls.statusUrl).to.be.a('string');
+              expect(data.urls.statusUrl).to.be("");
+              expect(data.urls.infoUrl).to.be.a('string');
+              expect(data.urls.infoUrl).to.be("");
+            expect(data.operation).to.be.a('string');
+            expect(data.operation).to.be("");
             expect(data.creation).to.be.a('number');
             expect(data.creation).to.be("0");
             {
@@ -122,8 +133,12 @@
             }
             expect(data.inputFormat).to.be.a('string');
             expect(data.inputFormat).to.be("");
+            expect(data.inputType).to.be.a('string');
+            expect(data.inputType).to.be("");
             expect(data.outputFormat).to.be.a('string');
             expect(data.outputFormat).to.be("");
+            expect(data.outputType).to.be.a('string');
+            expect(data.outputType).to.be("");
             expect(data.cpu).to.be.a('string');
             expect(data.cpu).to.be("");
             expect(data.ram).to.be.a('string');
@@ -193,6 +208,12 @@
               expect(data.urls.dockerImageUrl).to.be("");
               expect(data.urls.dashboardUrl).to.be.a('string');
               expect(data.urls.dashboardUrl).to.be("");
+              expect(data.urls.statusUrl).to.be.a('string');
+              expect(data.urls.statusUrl).to.be("");
+              expect(data.urls.infoUrl).to.be.a('string');
+              expect(data.urls.infoUrl).to.be("");
+            expect(data.operation).to.be.a('string');
+            expect(data.operation).to.be("");
             expect(data.creation).to.be.a('number');
             expect(data.creation).to.be("0");
             {
@@ -224,8 +245,12 @@
             }
             expect(data.inputFormat).to.be.a('string');
             expect(data.inputFormat).to.be("");
+            expect(data.inputType).to.be.a('string');
+            expect(data.inputType).to.be("");
             expect(data.outputFormat).to.be.a('string');
             expect(data.outputFormat).to.be("");
+            expect(data.outputType).to.be.a('string');
+            expect(data.outputType).to.be("");
             expect(data.cpu).to.be.a('string');
             expect(data.cpu).to.be("");
             expect(data.ram).to.be.a('string');
@@ -236,132 +261,6 @@
             expect(data.licensing).to.be("");
             expect(data.otDashboardId).to.be.a('string');
             expect(data.otDashboardId).to.be("");
-
-            done();
-          });
-          */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
-      describe('getModelInfo', function() {
-        it('should call getModelInfo successfully', function(done) {
-          // TODO: uncomment, update parameter values for getModelInfo call and complete the assertions
-          /*
-          var id = "id_example";
-
-          instance.getModelInfo(id, function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
-            // TODO: update response assertions
-            expect(data).to.be.a(Otpixel.JsonNode);
-            expect(data._array).to.be.a('boolean');
-            expect(data._array).to.be(false);
-            expect(data._null).to.be.a('boolean');
-            expect(data._null).to.be(false);
-            expect(data._float).to.be.a('boolean');
-            expect(data._float).to.be(false);
-            expect(data.nodeType).to.be.a('string');
-            expect(data.nodeType).to.be("ARRAY");
-            expect(data._number).to.be.a('boolean');
-            expect(data._number).to.be(false);
-            expect(data._int).to.be.a('boolean');
-            expect(data._int).to.be(false);
-            expect(data.bigDecimal).to.be.a('boolean');
-            expect(data.bigDecimal).to.be(false);
-            expect(data.valueNode).to.be.a('boolean');
-            expect(data.valueNode).to.be(false);
-            expect(data.textual).to.be.a('boolean');
-            expect(data.textual).to.be(false);
-            expect(data.binary).to.be.a('boolean');
-            expect(data.binary).to.be(false);
-            expect(data.pojo).to.be.a('boolean');
-            expect(data.pojo).to.be(false);
-            expect(data.integralNumber).to.be.a('boolean');
-            expect(data.integralNumber).to.be(false);
-            expect(data._long).to.be.a('boolean');
-            expect(data._long).to.be(false);
-            expect(data._double).to.be.a('boolean');
-            expect(data._double).to.be(false);
-            expect(data.bigInteger).to.be.a('boolean');
-            expect(data.bigInteger).to.be(false);
-            expect(data._object).to.be.a('boolean');
-            expect(data._object).to.be(false);
-            expect(data._short).to.be.a('boolean');
-            expect(data._short).to.be(false);
-            expect(data.containerNode).to.be.a('boolean');
-            expect(data.containerNode).to.be(false);
-            expect(data.missingNode).to.be.a('boolean');
-            expect(data.missingNode).to.be(false);
-            expect(data._boolean).to.be.a('boolean');
-            expect(data._boolean).to.be(false);
-            expect(data.floatingPointNumber).to.be.a('boolean');
-            expect(data.floatingPointNumber).to.be(false);
-
-            done();
-          });
-          */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
-      describe('getModelStatus', function() {
-        it('should call getModelStatus successfully', function(done) {
-          // TODO: uncomment, update parameter values for getModelStatus call and complete the assertions
-          /*
-          var id = "id_example";
-
-          instance.getModelStatus(id, function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
-            // TODO: update response assertions
-            expect(data).to.be.a(Otpixel.JsonNode);
-            expect(data._array).to.be.a('boolean');
-            expect(data._array).to.be(false);
-            expect(data._null).to.be.a('boolean');
-            expect(data._null).to.be(false);
-            expect(data._float).to.be.a('boolean');
-            expect(data._float).to.be(false);
-            expect(data.nodeType).to.be.a('string');
-            expect(data.nodeType).to.be("ARRAY");
-            expect(data._number).to.be.a('boolean');
-            expect(data._number).to.be(false);
-            expect(data._int).to.be.a('boolean');
-            expect(data._int).to.be(false);
-            expect(data.bigDecimal).to.be.a('boolean');
-            expect(data.bigDecimal).to.be(false);
-            expect(data.valueNode).to.be.a('boolean');
-            expect(data.valueNode).to.be(false);
-            expect(data.textual).to.be.a('boolean');
-            expect(data.textual).to.be(false);
-            expect(data.binary).to.be.a('boolean');
-            expect(data.binary).to.be(false);
-            expect(data.pojo).to.be.a('boolean');
-            expect(data.pojo).to.be(false);
-            expect(data.integralNumber).to.be.a('boolean');
-            expect(data.integralNumber).to.be(false);
-            expect(data._long).to.be.a('boolean');
-            expect(data._long).to.be(false);
-            expect(data._double).to.be.a('boolean');
-            expect(data._double).to.be(false);
-            expect(data.bigInteger).to.be.a('boolean');
-            expect(data.bigInteger).to.be(false);
-            expect(data._object).to.be.a('boolean');
-            expect(data._object).to.be(false);
-            expect(data._short).to.be.a('boolean');
-            expect(data._short).to.be(false);
-            expect(data.containerNode).to.be.a('boolean');
-            expect(data.containerNode).to.be(false);
-            expect(data.missingNode).to.be.a('boolean');
-            expect(data.missingNode).to.be(false);
-            expect(data._boolean).to.be.a('boolean');
-            expect(data._boolean).to.be(false);
-            expect(data.floatingPointNumber).to.be.a('boolean');
-            expect(data.floatingPointNumber).to.be(false);
 
             done();
           });
@@ -408,6 +307,12 @@
                 expect(data.urls.dockerImageUrl).to.be("");
                 expect(data.urls.dashboardUrl).to.be.a('string');
                 expect(data.urls.dashboardUrl).to.be("");
+                expect(data.urls.statusUrl).to.be.a('string');
+                expect(data.urls.statusUrl).to.be("");
+                expect(data.urls.infoUrl).to.be.a('string');
+                expect(data.urls.infoUrl).to.be("");
+              expect(data.operation).to.be.a('string');
+              expect(data.operation).to.be("");
               expect(data.creation).to.be.a('number');
               expect(data.creation).to.be("0");
               {
@@ -439,8 +344,12 @@
               }
               expect(data.inputFormat).to.be.a('string');
               expect(data.inputFormat).to.be("");
+              expect(data.inputType).to.be.a('string');
+              expect(data.inputType).to.be("");
               expect(data.outputFormat).to.be.a('string');
               expect(data.outputFormat).to.be("");
+              expect(data.outputType).to.be.a('string');
+              expect(data.outputType).to.be("");
               expect(data.cpu).to.be.a('string');
               expect(data.cpu).to.be("");
               expect(data.ram).to.be.a('string');
@@ -475,6 +384,9 @@
           body.urls.serviceUrl = "";
           body.urls.dockerImageUrl = "";
           body.urls.dashboardUrl = "";
+          body.urls.statusUrl = "";
+          body.urls.infoUrl = "";
+          body.operation = "";
           body.creation = "0";
           body.ports = [""];
           body.schedulable = false;
@@ -483,7 +395,9 @@
           body.inputDatasources[0].description = "";
           body.inputDatasources[0].serviceUrl = "";
           body.inputFormat = "";
+          body.inputType = "";
           body.outputFormat = "";
+          body.outputType = "";
           body.cpu = "";
           body.ram = "";
           body.status = "";
@@ -516,6 +430,12 @@
               expect(data.urls.dockerImageUrl).to.be("");
               expect(data.urls.dashboardUrl).to.be.a('string');
               expect(data.urls.dashboardUrl).to.be("");
+              expect(data.urls.statusUrl).to.be.a('string');
+              expect(data.urls.statusUrl).to.be("");
+              expect(data.urls.infoUrl).to.be.a('string');
+              expect(data.urls.infoUrl).to.be("");
+            expect(data.operation).to.be.a('string');
+            expect(data.operation).to.be("");
             expect(data.creation).to.be.a('number');
             expect(data.creation).to.be("0");
             {
@@ -547,8 +467,12 @@
             }
             expect(data.inputFormat).to.be.a('string');
             expect(data.inputFormat).to.be("");
+            expect(data.inputType).to.be.a('string');
+            expect(data.inputType).to.be("");
             expect(data.outputFormat).to.be.a('string');
             expect(data.outputFormat).to.be("");
+            expect(data.outputType).to.be.a('string');
+            expect(data.outputType).to.be("");
             expect(data.cpu).to.be.a('string');
             expect(data.cpu).to.be("");
             expect(data.ram).to.be.a('string');

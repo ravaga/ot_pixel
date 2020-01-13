@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/JsonNode', 'model/Model'], factory);
+    define(['ApiClient', 'model/Model'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/JsonNode'), require('../model/Model'));
+    module.exports = factory(require('../ApiClient'), require('../model/Model'));
   } else {
     // Browser globals (root is window)
     if (!root.Otpixel) {
       root.Otpixel = {};
     }
-    root.Otpixel.ModelResourceApi = factory(root.Otpixel.ApiClient, root.Otpixel.JsonNode, root.Otpixel.Model);
+    root.Otpixel.ModelResourceApi = factory(root.Otpixel.ApiClient, root.Otpixel.Model);
   }
-}(this, function(ApiClient, JsonNode, Model) {
+}(this, function(ApiClient, Model) {
   'use strict';
 
   /**
@@ -184,102 +184,6 @@
 
       return this.apiClient.callApi(
         '/models/get/{id}', 'GET',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the getModelInfo operation.
-     * @callback module:api/ModelResourceApi~getModelInfoCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/JsonNode} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Get the status of a model by id
-     * 
-     * @param {String} id model
-     * @param {module:api/ModelResourceApi~getModelInfoCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/JsonNode}
-     */
-    this.getModelInfo = function(id, callback) {
-      var postBody = null;
-
-      // verify the required parameter 'id' is set
-      if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling getModelInfo");
-      }
-
-
-      var pathParams = {
-        'id': id
-      };
-      var queryParams = {
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['apikey'];
-      var contentTypes = [];
-      var accepts = ['application/json'];
-      var returnType = JsonNode;
-
-      return this.apiClient.callApi(
-        '/models/get/{id}/info', 'GET',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the getModelStatus operation.
-     * @callback module:api/ModelResourceApi~getModelStatusCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/JsonNode} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Get the status of a model by id
-     * 
-     * @param {String} id model
-     * @param {module:api/ModelResourceApi~getModelStatusCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/JsonNode}
-     */
-    this.getModelStatus = function(id, callback) {
-      var postBody = null;
-
-      // verify the required parameter 'id' is set
-      if (id === undefined || id === null) {
-        throw new Error("Missing the required parameter 'id' when calling getModelStatus");
-      }
-
-
-      var pathParams = {
-        'id': id
-      };
-      var queryParams = {
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['apikey'];
-      var contentTypes = [];
-      var accepts = ['application/json'];
-      var returnType = JsonNode;
-
-      return this.apiClient.callApi(
-        '/models/get/{id}/status', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

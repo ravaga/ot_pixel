@@ -68,6 +68,8 @@
         obj.description = ApiClient.convertToType(data['description'], 'String');
       if (data.hasOwnProperty('urls'))
         obj.urls = ServiceUrls.constructFromObject(data['urls']);
+      if (data.hasOwnProperty('operation'))
+        obj.operation = ApiClient.convertToType(data['operation'], 'String');
       if (data.hasOwnProperty('creation'))
         obj.creation = ApiClient.convertToType(data['creation'], 'Number');
       if (data.hasOwnProperty('ports'))
@@ -78,8 +80,12 @@
         obj.inputDatasources = ApiClient.convertToType(data['inputDatasources'], [InputDataSource]);
       if (data.hasOwnProperty('inputFormat'))
         obj.inputFormat = ApiClient.convertToType(data['inputFormat'], 'String');
+      if (data.hasOwnProperty('inputType'))
+        obj.inputType = ApiClient.convertToType(data['inputType'], 'String');
       if (data.hasOwnProperty('outputFormat'))
         obj.outputFormat = ApiClient.convertToType(data['outputFormat'], 'String');
+      if (data.hasOwnProperty('outputType'))
+        obj.outputType = ApiClient.convertToType(data['outputType'], 'String');
       if (data.hasOwnProperty('cpu'))
         obj.cpu = ApiClient.convertToType(data['cpu'], 'String');
       if (data.hasOwnProperty('ram'))
@@ -130,6 +136,11 @@
   exports.prototype.urls = undefined;
 
   /**
+   * @member {String} operation
+   */
+  exports.prototype.operation = undefined;
+
+  /**
    * @member {Number} creation
    */
   exports.prototype.creation = undefined;
@@ -155,9 +166,19 @@
   exports.prototype.inputFormat = undefined;
 
   /**
+   * @member {String} inputType
+   */
+  exports.prototype.inputType = undefined;
+
+  /**
    * @member {String} outputFormat
    */
   exports.prototype.outputFormat = undefined;
+
+  /**
+   * @member {String} outputType
+   */
+  exports.prototype.outputType = undefined;
 
   /**
    * @member {String} cpu

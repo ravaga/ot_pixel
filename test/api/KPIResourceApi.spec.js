@@ -299,6 +299,34 @@
           done();
         });
       });
+      describe('getKPILastValuesByID', function() {
+        it('should call getKPILastValuesByID successfully', function(done) {
+          // TODO: uncomment, update parameter values for getKPILastValuesByID call and complete the assertions
+          /*
+          var id = "id_example";
+
+          instance.getKPILastValuesByID(id, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            let dataCtr = data;
+            expect(dataCtr).to.be.an(Array);
+            expect(dataCtr).to.not.be.empty();
+            for (let p in dataCtr) {
+              let data = dataCtr[p];
+              expect(data).to.be.a(Object);
+              // expect(data).to.be(null);
+            }
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
       describe('listKPIs', function() {
         it('should call listKPIs successfully', function(done) {
           // TODO: uncomment, update parameter values for listKPIs call and complete the assertions

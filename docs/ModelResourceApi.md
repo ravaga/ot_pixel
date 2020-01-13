@@ -7,8 +7,6 @@ Method | HTTP request | Description
 [**createModel**](ModelResourceApi.md#createModel) | **PUT** /models/create | Create a model
 [**deleteModel**](ModelResourceApi.md#deleteModel) | **DELETE** /models/delete/{id} | Delete a model
 [**getModel**](ModelResourceApi.md#getModel) | **GET** /models/get/{id} | Get a model by id
-[**getModelInfo**](ModelResourceApi.md#getModelInfo) | **GET** /models/get/{id}/info | Get the status of a model by id
-[**getModelStatus**](ModelResourceApi.md#getModelStatus) | **GET** /models/get/{id}/status | Get the status of a model by id
 [**listModels**](ModelResourceApi.md#listModels) | **GET** /models/list | List all models
 [**updateModel**](ModelResourceApi.md#updateModel) | **POST** /models/update | Update a model
 
@@ -162,112 +160,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Model**](Model.md)
-
-### Authorization
-
-[apikey](../README.md#apikey)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-<a name="getModelInfo"></a>
-# **getModelInfo**
-> JsonNode getModelInfo(id)
-
-Get the status of a model by id
-
-
-
-### Example
-```javascript
-var Otpixel = require('otpixel');
-var defaultClient = Otpixel.ApiClient.instance;
-
-// Configure API key authorization: apikey
-var apikey = defaultClient.authentications['apikey'];
-apikey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apikey.apiKeyPrefix = 'Token';
-
-var apiInstance = new Otpixel.ModelResourceApi();
-
-var id = "id_example"; // String | model
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.getModelInfo(id, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **String**| model | 
-
-### Return type
-
-[**JsonNode**](JsonNode.md)
-
-### Authorization
-
-[apikey](../README.md#apikey)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-<a name="getModelStatus"></a>
-# **getModelStatus**
-> JsonNode getModelStatus(id)
-
-Get the status of a model by id
-
-
-
-### Example
-```javascript
-var Otpixel = require('otpixel');
-var defaultClient = Otpixel.ApiClient.instance;
-
-// Configure API key authorization: apikey
-var apikey = defaultClient.authentications['apikey'];
-apikey.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apikey.apiKeyPrefix = 'Token';
-
-var apiInstance = new Otpixel.ModelResourceApi();
-
-var id = "id_example"; // String | model
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.getModelStatus(id, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **String**| model | 
-
-### Return type
-
-[**JsonNode**](JsonNode.md)
 
 ### Authorization
 

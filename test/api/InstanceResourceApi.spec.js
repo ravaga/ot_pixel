@@ -222,7 +222,7 @@
           /*
           var opts = {};
           opts.idRef = "idRef_example";
-          opts.user = "user_example";
+          opts.type = "type_example";
           opts.status = "status_example";
 
           instance.listInstances(opts, function(error, data, response) {

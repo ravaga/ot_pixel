@@ -60,6 +60,10 @@
         obj.dockerImageUrl = ApiClient.convertToType(data['dockerImageUrl'], 'String');
       if (data.hasOwnProperty('dashboardUrl'))
         obj.dashboardUrl = ApiClient.convertToType(data['dashboardUrl'], 'String');
+      if (data.hasOwnProperty('statusUrl'))
+        obj.statusUrl = ApiClient.convertToType(data['statusUrl'], 'String');
+      if (data.hasOwnProperty('infoUrl'))
+        obj.infoUrl = ApiClient.convertToType(data['infoUrl'], 'String');
     }
     return obj;
   }
@@ -78,6 +82,16 @@
    * @member {String} dashboardUrl
    */
   exports.prototype.dashboardUrl = undefined;
+
+  /**
+   * @member {String} statusUrl
+   */
+  exports.prototype.statusUrl = undefined;
+
+  /**
+   * @member {String} infoUrl
+   */
+  exports.prototype.infoUrl = undefined;
 
   return exports;
 

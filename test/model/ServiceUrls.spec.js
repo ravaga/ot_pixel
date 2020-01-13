@@ -58,6 +58,18 @@
         // expect(instance.dashboardUrl).to.be(expectedValueLiteral);
       });
 
+      it('should have the property statusUrl (base name: "statusUrl")', function() {
+        // TODO: update the code to test the property statusUrl
+        expect(instance).to.have.property('statusUrl');
+        // expect(instance.statusUrl).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property infoUrl (base name: "infoUrl")', function() {
+        // TODO: update the code to test the property infoUrl
+        expect(instance).to.have.property('infoUrl');
+        // expect(instance.infoUrl).to.be(expectedValueLiteral);
+      });
+
     });
   });
 

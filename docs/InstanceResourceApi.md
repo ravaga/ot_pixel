@@ -193,7 +193,7 @@ var apiInstance = new Otpixel.InstanceResourceApi();
 
 var opts = { 
   'idRef': "idRef_example", // String | idRef
-  'user': "user_example", // String | user
+  'type': "type_example", // String | user
   'status': "status_example" // String | status
 };
 
@@ -212,7 +212,7 @@ apiInstance.listInstances(opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **idRef** | **String**| idRef | [optional] 
- **user** | **String**| user | [optional] 
+ **type** | **String**| user | [optional] 
  **status** | **String**| status | [optional] 
 
 ### Return type

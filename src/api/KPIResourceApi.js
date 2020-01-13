@@ -238,6 +238,54 @@
     }
 
     /**
+     * Callback function to receive the result of the getKPILastValuesByID operation.
+     * @callback module:api/KPIResourceApi~getKPILastValuesByIDCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<Object>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get the last value of a KPI by id
+     * 
+     * @param {String} id kpi
+     * @param {module:api/KPIResourceApi~getKPILastValuesByIDCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<Object>}
+     */
+    this.getKPILastValuesByID = function(id, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling getKPILastValuesByID");
+      }
+
+
+      var pathParams = {
+        'id': id
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['apikey'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = [Object];
+
+      return this.apiClient.callApi(
+        '/kpis/get/{id}/lastValues', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the listKPIs operation.
      * @callback module:api/KPIResourceApi~listKPIsCallback
      * @param {String} error Error message, if any.

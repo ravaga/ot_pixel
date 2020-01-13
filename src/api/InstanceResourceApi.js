@@ -202,7 +202,7 @@
      * 
      * @param {Object} opts Optional parameters
      * @param {String} opts.idRef idRef
-     * @param {String} opts.user user
+     * @param {String} opts.type user
      * @param {String} opts.status status
      * @param {module:api/InstanceResourceApi~listInstancesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/Instance>}
@@ -216,7 +216,7 @@
       };
       var queryParams = {
         'idRef': opts['idRef'],
-        'user': opts['user'],
+        'type': opts['type'],
         'status': opts['status'],
       };
       var collectionQueryParams = {

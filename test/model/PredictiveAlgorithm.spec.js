@@ -82,6 +82,12 @@
         // expect(instance.urls).to.be(expectedValueLiteral);
       });
 
+      it('should have the property operation (base name: "operation")', function() {
+        // TODO: update the code to test the property operation
+        expect(instance).to.have.property('operation');
+        // expect(instance.operation).to.be(expectedValueLiteral);
+      });
+
       it('should have the property creation (base name: "creation")', function() {
         // TODO: update the code to test the property creation
         expect(instance).to.have.property('creation');
@@ -118,10 +124,22 @@
         // expect(instance.inputFormat).to.be(expectedValueLiteral);
       });
 
+      it('should have the property inputType (base name: "inputType")', function() {
+        // TODO: update the code to test the property inputType
+        expect(instance).to.have.property('inputType');
+        // expect(instance.inputType).to.be(expectedValueLiteral);
+      });
+
       it('should have the property outputFormat (base name: "outputFormat")', function() {
         // TODO: update the code to test the property outputFormat
         expect(instance).to.have.property('outputFormat');
         // expect(instance.outputFormat).to.be(expectedValueLiteral);
+      });
+
+      it('should have the property outputType (base name: "outputType")', function() {
+        // TODO: update the code to test the property outputType
+        expect(instance).to.have.property('outputType');
+        // expect(instance.outputType).to.be(expectedValueLiteral);
       });
 
       it('should have the property cpu (base name: "cpu")', function() {
