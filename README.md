@@ -103,7 +103,10 @@ apikey.apiKey = "YOUR API KEY"
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apikey.apiKeyPrefix['Authorization'] = "Token"
 
-var api = new Otpixel.ConfigResourceApi()
+var api = new Otpixel.InstanceResourceApi()
+
+var body = new Otpixel.Instance(); // {Instance} Instance description
+
 
 var callback = function(error, data, response) {
   if (error) {
@@ -112,25 +115,16 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.getConfig(callback);
+api.createInstance(body, callback);
 
 ```
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://otpixel.satrdlab.upv.es/api*
+All URIs are relative to *http://otpixel.satrdlab.upv.es:8080/otpixel/api*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*Otpixel.ConfigResourceApi* | [**getConfig**](docs/ConfigResourceApi.md#getConfig) | **GET** /config/get | Get Config by id
-*Otpixel.ConfigResourceApi* | [**setConfig**](docs/ConfigResourceApi.md#setConfig) | **PUT** /config/set | Create a Config
-*Otpixel.DummyServiceResourceApi* | [**getDummyService**](docs/DummyServiceResourceApi.md#getDummyService) | **GET** /dummyService/get | Get dummy JSON response
-*Otpixel.DummyServiceResourceApi* | [**postDummyService**](docs/DummyServiceResourceApi.md#postDummyService) | **POST** /dummyService/post | Obtain dummy echo JSON
-*Otpixel.EventLogItemResourceApi* | [**createEventLogItem**](docs/EventLogItemResourceApi.md#createEventLogItem) | **PUT** /eventLogItem/create | Create an eventLogItem
-*Otpixel.EventLogItemResourceApi* | [**deleteEventLogItem**](docs/EventLogItemResourceApi.md#deleteEventLogItem) | **DELETE** /eventLogItem/delete/{id} | Delete an EventLogItem
-*Otpixel.EventLogItemResourceApi* | [**getEventLogItemByID**](docs/EventLogItemResourceApi.md#getEventLogItemByID) | **GET** /eventLogItem/get/{id} | Get an eventLogItem by id
-*Otpixel.EventLogItemResourceApi* | [**listEventLogItem**](docs/EventLogItemResourceApi.md#listEventLogItem) | **GET** /eventLogItem/list | List all eventLogItems
-*Otpixel.EventLogItemResourceApi* | [**updateEventLogItem**](docs/EventLogItemResourceApi.md#updateEventLogItem) | **POST** /eventLogItem/update | Update an EeventLogItem
 *Otpixel.InstanceResourceApi* | [**createInstance**](docs/InstanceResourceApi.md#createInstance) | **PUT** /instances/create | Create an instance
 *Otpixel.InstanceResourceApi* | [**deleteInstance**](docs/InstanceResourceApi.md#deleteInstance) | **DELETE** /instances/delete/{id} | Delete an instance
 *Otpixel.InstanceResourceApi* | [**getInstance**](docs/InstanceResourceApi.md#getInstance) | **GET** /instances/get/{id} | Get an instance by id
@@ -146,21 +140,9 @@ Class | Method | HTTP request | Description
 *Otpixel.ModelResourceApi* | [**createModel**](docs/ModelResourceApi.md#createModel) | **PUT** /models/create | Create a model
 *Otpixel.ModelResourceApi* | [**deleteModel**](docs/ModelResourceApi.md#deleteModel) | **DELETE** /models/delete/{id} | Delete a model
 *Otpixel.ModelResourceApi* | [**getModel**](docs/ModelResourceApi.md#getModel) | **GET** /models/get/{id} | Get a model by id
+*Otpixel.ModelResourceApi* | [**getModelInfo**](docs/ModelResourceApi.md#getModelInfo) | **GET** /models/get/{id}/info | Get information of a model by id
 *Otpixel.ModelResourceApi* | [**listModels**](docs/ModelResourceApi.md#listModels) | **GET** /models/list | List all models
 *Otpixel.ModelResourceApi* | [**updateModel**](docs/ModelResourceApi.md#updateModel) | **POST** /models/update | Update a model
-*Otpixel.PortResourceApi* | [**createPort**](docs/PortResourceApi.md#createPort) | **PUT** /ports/create | Create an port
-*Otpixel.PortResourceApi* | [**deletePort**](docs/PortResourceApi.md#deletePort) | **DELETE** /ports/delete/{id} | Delete an port
-*Otpixel.PortResourceApi* | [**getPort**](docs/PortResourceApi.md#getPort) | **GET** /ports/get/{id} | Get an port by id
-*Otpixel.PortResourceApi* | [**listPorts**](docs/PortResourceApi.md#listPorts) | **GET** /ports/list | List all ports
-*Otpixel.PortResourceApi* | [**updatePort**](docs/PortResourceApi.md#updatePort) | **POST** /ports/update | Update an port
-*Otpixel.PredictiveAlgorithmResourceApi* | [**createPredictiveAlgorithm**](docs/PredictiveAlgorithmResourceApi.md#createPredictiveAlgorithm) | **PUT** /predictiveAlgorithms/create | Create a predictive algorithm
-*Otpixel.PredictiveAlgorithmResourceApi* | [**deletePredictiveAlgorithm**](docs/PredictiveAlgorithmResourceApi.md#deletePredictiveAlgorithm) | **DELETE** /predictiveAlgorithms/delete/{id} | Delete a predictive algorithm
-*Otpixel.PredictiveAlgorithmResourceApi* | [**executePredictiveAlgorithm**](docs/PredictiveAlgorithmResourceApi.md#executePredictiveAlgorithm) | **POST** /predictiveAlgorithms/execute/{id} | Execute a preditive algorithm by id
-*Otpixel.PredictiveAlgorithmResourceApi* | [**getPredictiveAlgorithm**](docs/PredictiveAlgorithmResourceApi.md#getPredictiveAlgorithm) | **GET** /predictiveAlgorithms/get/{id} | Get a predictive algorithm by id
-*Otpixel.PredictiveAlgorithmResourceApi* | [**getPredictiveAlgorithmInfo**](docs/PredictiveAlgorithmResourceApi.md#getPredictiveAlgorithmInfo) | **GET** /predictiveAlgorithms/get/{id}/info | Get the status of a predictive algorithm by id
-*Otpixel.PredictiveAlgorithmResourceApi* | [**getPredictiveAlgorithmStatus**](docs/PredictiveAlgorithmResourceApi.md#getPredictiveAlgorithmStatus) | **GET** /predictiveAlgorithms/get/{id}/status | Get the status of a predictive algorithm by id
-*Otpixel.PredictiveAlgorithmResourceApi* | [**listPredictiveAlgorithms**](docs/PredictiveAlgorithmResourceApi.md#listPredictiveAlgorithms) | **GET** /predictiveAlgorithms/list | List all predictive algorithms
-*Otpixel.PredictiveAlgorithmResourceApi* | [**updatePredictiveAlgorithm**](docs/PredictiveAlgorithmResourceApi.md#updatePredictiveAlgorithm) | **POST** /predictiveAlgorithms/update | Update a predictive algorithm
 *Otpixel.ScheduledInstanceResourceApi* | [**createScheduledInstance**](docs/ScheduledInstanceResourceApi.md#createScheduledInstance) | **PUT** /scheduledInstances/create | Create a scheduled instance
 *Otpixel.ScheduledInstanceResourceApi* | [**deleteScheduledInstance**](docs/ScheduledInstanceResourceApi.md#deleteScheduledInstance) | **DELETE** /scheduledInstances/delete/{id} | Delete a scheduled instance
 *Otpixel.ScheduledInstanceResourceApi* | [**getScheduledInstance**](docs/ScheduledInstanceResourceApi.md#getScheduledInstance) | **GET** /scheduledInstances/get/{id} | Get a scheduled instance by id
@@ -170,17 +152,22 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [Otpixel.Config](docs/Config.md)
- - [Otpixel.Coordinates](docs/Coordinates.md)
- - [Otpixel.DummyJSON](docs/DummyJSON.md)
- - [Otpixel.EventLogItem](docs/EventLogItem.md)
- - [Otpixel.IHConfig](docs/IHConfig.md)
- - [Otpixel.Input](docs/Input.md)
- - [Otpixel.InputDataSource](docs/InputDataSource.md)
+ - [Otpixel.ConnectorItem](docs/ConnectorItem.md)
+ - [Otpixel.ConnectorOptionItem](docs/ConnectorOptionItem.md)
+ - [Otpixel.DockerInfo](docs/DockerInfo.md)
+ - [Otpixel.GeneralInfo](docs/GeneralInfo.md)
  - [Otpixel.InputEndpoint](docs/InputEndpoint.md)
  - [Otpixel.InputHeader](docs/InputHeader.md)
+ - [Otpixel.InputItem](docs/InputItem.md)
+ - [Otpixel.InputOptionItem](docs/InputOptionItem.md)
  - [Otpixel.Instance](docs/Instance.md)
- - [Otpixel.JsonNode](docs/JsonNode.md)
+ - [Otpixel.InstanceForceInputItem](docs/InstanceForceInputItem.md)
+ - [Otpixel.InstanceInputItem](docs/InstanceInputItem.md)
+ - [Otpixel.InstanceInputOptionItem](docs/InstanceInputOptionItem.md)
+ - [Otpixel.InstanceLoggingItem](docs/InstanceLoggingItem.md)
+ - [Otpixel.InstanceLoggingOptionItem](docs/InstanceLoggingOptionItem.md)
+ - [Otpixel.InstanceOutputItem](docs/InstanceOutputItem.md)
+ - [Otpixel.InstanceOutputOptionItem](docs/InstanceOutputOptionItem.md)
  - [Otpixel.KPI](docs/KPI.md)
  - [Otpixel.KpiOperation](docs/KpiOperation.md)
  - [Otpixel.KpiOperationDynamic](docs/KpiOperationDynamic.md)
@@ -188,13 +175,16 @@ Class | Method | HTTP request | Description
  - [Otpixel.KpiOperationStatic](docs/KpiOperationStatic.md)
  - [Otpixel.KpiThresholds](docs/KpiThresholds.md)
  - [Otpixel.LastKPI](docs/LastKPI.md)
+ - [Otpixel.LoggingItem](docs/LoggingItem.md)
+ - [Otpixel.LoggingOptionItem](docs/LoggingOptionItem.md)
  - [Otpixel.Model](docs/Model.md)
- - [Otpixel.OTConfig](docs/OTConfig.md)
- - [Otpixel.Port](docs/Port.md)
- - [Otpixel.PredictiveAlgorithm](docs/PredictiveAlgorithm.md)
+ - [Otpixel.OutputItem](docs/OutputItem.md)
+ - [Otpixel.OutputOptionItem](docs/OutputOptionItem.md)
  - [Otpixel.ScheduleInfo](docs/ScheduleInfo.md)
  - [Otpixel.ScheduledInstance](docs/ScheduledInstance.md)
- - [Otpixel.ServiceUrls](docs/ServiceUrls.md)
+ - [Otpixel.SupportedTransformationItem](docs/SupportedTransformationItem.md)
+ - [Otpixel.SystemInfo](docs/SystemInfo.md)
+ - [Otpixel.Transform](docs/Transform.md)
 
 
 ## Documentation for Authorization

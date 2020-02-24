@@ -1,6 +1,6 @@
 # Otpixel.ScheduledInstanceResourceApi
 
-All URIs are relative to *https://otpixel.satrdlab.upv.es/api*
+All URIs are relative to *http://otpixel.satrdlab.upv.es:8080/otpixel/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------

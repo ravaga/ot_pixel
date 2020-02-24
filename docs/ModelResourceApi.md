@@ -1,12 +1,13 @@
 # Otpixel.ModelResourceApi
 
-All URIs are relative to *https://otpixel.satrdlab.upv.es/api*
+All URIs are relative to *http://otpixel.satrdlab.upv.es:8080/otpixel/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createModel**](ModelResourceApi.md#createModel) | **PUT** /models/create | Create a model
 [**deleteModel**](ModelResourceApi.md#deleteModel) | **DELETE** /models/delete/{id} | Delete a model
 [**getModel**](ModelResourceApi.md#getModel) | **GET** /models/get/{id} | Get a model by id
+[**getModelInfo**](ModelResourceApi.md#getModelInfo) | **GET** /models/get/{id}/info | Get information of a model by id
 [**listModels**](ModelResourceApi.md#listModels) | **GET** /models/list | List all models
 [**updateModel**](ModelResourceApi.md#updateModel) | **POST** /models/update | Update a model
 
@@ -170,6 +171,59 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+<a name="getModelInfo"></a>
+# **getModelInfo**
+> GeneralInfo getModelInfo(id)
+
+Get information of a model by id
+
+
+
+### Example
+```javascript
+var Otpixel = require('otpixel');
+var defaultClient = Otpixel.ApiClient.instance;
+
+// Configure API key authorization: apikey
+var apikey = defaultClient.authentications['apikey'];
+apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apikey.apiKeyPrefix = 'Token';
+
+var apiInstance = new Otpixel.ModelResourceApi();
+
+var id = "id_example"; // String | model
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.getModelInfo(id, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| model | 
+
+### Return type
+
+[**GeneralInfo**](GeneralInfo.md)
+
+### Authorization
+
+[apikey](../README.md#apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
 <a name="listModels"></a>
 # **listModels**
 > [Model] listModels(opts)
@@ -192,7 +246,8 @@ apikey.apiKey = 'YOUR API KEY';
 var apiInstance = new Otpixel.ModelResourceApi();
 
 var opts = { 
-  'status': "status_example" // String | status
+  'otStatus': "otStatus_example", // String | otStatus
+  'type': "type_example" // String | type
 };
 
 var callback = function(error, data, response) {
@@ -209,7 +264,8 @@ apiInstance.listModels(opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **status** | **String**| status | [optional] 
+ **otStatus** | **String**| otStatus | [optional] 
+ **type** | **String**| type | [optional] 
 
 ### Return type
 

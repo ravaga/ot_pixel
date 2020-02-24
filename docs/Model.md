@@ -4,25 +4,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** |  | [optional] 
-**name** | **String** |  | [optional] 
-**type** | **String** |  | [optional] 
-**category** | **String** |  | [optional] 
-**author** | **String** |  | [optional] 
-**description** | **String** |  | [optional] 
-**urls** | [**ServiceUrls**](ServiceUrls.md) |  | [optional] 
-**operation** | **String** |  | [optional] 
+**generalInfo** | [**GeneralInfo**](GeneralInfo.md) |  | [optional] 
+**dockerInfo** | [**DockerInfo**](DockerInfo.md) |  | [optional] 
 **creation** | **Number** |  | [optional] 
-**ports** | **[String]** |  | [optional] 
-**schedulable** | **Boolean** |  | [optional] 
-**inputDatasources** | [**[InputDataSource]**](InputDataSource.md) |  | [optional] 
-**inputFormat** | **String** |  | [optional] 
-**inputType** | **String** |  | [optional] 
-**outputFormat** | **String** |  | [optional] 
-**outputType** | **String** |  | [optional] 
-**cpu** | **String** |  | [optional] 
-**ram** | **String** |  | [optional] 
-**status** | **String** |  | [optional] 
-**licensing** | **String** |  | [optional] 
-**otDashboardId** | **String** |  | [optional] 
+**otStatus** | **String** |  | [optional] 
 
 
