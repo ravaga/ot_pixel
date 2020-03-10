@@ -19,5 +19,6 @@ Name | Type | Description | Notes
 **dockerId** | **String** |  | [optional] 
 **active** | **Boolean** |  | [optional] 
 **scheduleInfo** | [**ScheduleInfo**](ScheduleInfo.md) |  | [optional] 
+**lastEnd** | **Number** |  | [optional] 
 
 
