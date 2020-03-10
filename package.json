@@ -1,6 +1,6 @@
 {
   "name": "otpixel",
-  "version": "0.5",
+  "version": "0.6.0",
   "description": "ERROR_UNKNOWN",
   "license": "Unlicense",
   "main": "src/index.js",
