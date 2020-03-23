@@ -878,6 +878,186 @@
           done();
         });
       });
+      describe('updateStatusScheduledInstance', function() {
+        it('should call updateStatusScheduledInstance successfully', function(done) {
+          // TODO: uncomment, update parameter values for updateStatusScheduledInstance call and complete the assertions
+          /*
+          var id = "id_example";
+          var status = "status_example";
+
+          instance.updateStatusScheduledInstance(id, status, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a(Otpixel.ScheduledInstance);
+            expect(data.id).to.be.a('string');
+            expect(data.id).to.be("");
+            expect(data.idRef).to.be.a('string');
+            expect(data.idRef).to.be("");
+            expect(data.name).to.be.a('string');
+            expect(data.name).to.be("");
+            expect(data.description).to.be.a('string');
+            expect(data.description).to.be("");
+            expect(data.mode).to.be.a('string');
+            expect(data.mode).to.be("");
+            expect(data.user).to.be.a('string');
+            expect(data.user).to.be("");
+            {
+              let dataCtr = data.input;
+              expect(dataCtr).to.be.an(Array);
+              expect(dataCtr).to.not.be.empty();
+              for (let p in dataCtr) {
+                let data = dataCtr[p];
+                expect(data).to.be.a(Otpixel.InstanceInputItem);
+                expect(data.name).to.be.a('string');
+                expect(data.name).to.be("");
+                expect(data.category).to.be.a('string');
+                expect(data.category).to.be("");
+                expect(data.type).to.be.a('string');
+                expect(data.type).to.be("");
+                expect(data.description).to.be.a('string');
+                expect(data.description).to.be("");
+                expect(data.metadata).to.be.a(Object);
+                expect(data.metadata).to.be();
+                {
+                  let dataCtr = data.options;
+                  expect(dataCtr).to.be.an(Array);
+                  expect(dataCtr).to.not.be.empty();
+                  for (let p in dataCtr) {
+                    let data = dataCtr[p];
+                    expect(data).to.be.a(Otpixel.InstanceInputOptionItem);
+                    expect(data.name).to.be.a('string');
+                    expect(data.name).to.be("");
+                    expect(data.type).to.be.a('string');
+                    expect(data.type).to.be("");
+                    expect(data.description).to.be.a('string');
+                    expect(data.description).to.be("");
+                    expect(data.value).to.be.a(Object);
+                    expect(data.value).to.be();
+                  }
+                }
+              }
+            }
+            {
+              let dataCtr = data.forceinput;
+              expect(dataCtr).to.be.an(Array);
+              expect(dataCtr).to.not.be.empty();
+              for (let p in dataCtr) {
+                let data = dataCtr[p];
+                expect(data).to.be.a(Otpixel.InstanceForceInputItem);
+                expect(data.name).to.be.a('string');
+                expect(data.name).to.be("");
+                expect(data.type).to.be.a('string');
+                expect(data.type).to.be("");
+                expect(data.description).to.be.a('string');
+                expect(data.description).to.be("");
+                expect(data.metadata).to.be.a(Object);
+                expect(data.metadata).to.be();
+                expect(data.value).to.be.a(Object);
+                expect(data.value).to.be();
+              }
+            }
+            {
+              let dataCtr = data.output;
+              expect(dataCtr).to.be.an(Array);
+              expect(dataCtr).to.not.be.empty();
+              for (let p in dataCtr) {
+                let data = dataCtr[p];
+                expect(data).to.be.a(Otpixel.InstanceOutputItem);
+                expect(data.name).to.be.a('string');
+                expect(data.name).to.be("");
+                expect(data.category).to.be.a('string');
+                expect(data.category).to.be("");
+                expect(data.type).to.be.a('string');
+                expect(data.type).to.be("");
+                expect(data.description).to.be.a('string');
+                expect(data.description).to.be("");
+                expect(data.metadata).to.be.a(Object);
+                expect(data.metadata).to.be();
+                {
+                  let dataCtr = data.options;
+                  expect(dataCtr).to.be.an(Array);
+                  expect(dataCtr).to.not.be.empty();
+                  for (let p in dataCtr) {
+                    let data = dataCtr[p];
+                    expect(data).to.be.a(Otpixel.InstanceOutputOptionItem);
+                    expect(data.name).to.be.a('string');
+                    expect(data.name).to.be("");
+                    expect(data.type).to.be.a('string');
+                    expect(data.type).to.be("");
+                    expect(data.description).to.be.a('string');
+                    expect(data.description).to.be("");
+                    expect(data.value).to.be.a(Object);
+                    expect(data.value).to.be();
+                  }
+                }
+              }
+            }
+            {
+              let dataCtr = data.logging;
+              expect(dataCtr).to.be.an(Array);
+              expect(dataCtr).to.not.be.empty();
+              for (let p in dataCtr) {
+                let data = dataCtr[p];
+                expect(data).to.be.a(Otpixel.InstanceLoggingItem);
+                expect(data.name).to.be.a('string');
+                expect(data.name).to.be("");
+                expect(data.category).to.be.a('string');
+                expect(data.category).to.be("");
+                expect(data.type).to.be.a('string');
+                expect(data.type).to.be("");
+                expect(data.description).to.be.a('string');
+                expect(data.description).to.be("");
+                expect(data.metadata).to.be.a(Object);
+                expect(data.metadata).to.be();
+                {
+                  let dataCtr = data.options;
+                  expect(dataCtr).to.be.an(Array);
+                  expect(dataCtr).to.not.be.empty();
+                  for (let p in dataCtr) {
+                    let data = dataCtr[p];
+                    expect(data).to.be.a(Otpixel.InstanceLoggingOptionItem);
+                    expect(data.name).to.be.a('string');
+                    expect(data.name).to.be("");
+                    expect(data.type).to.be.a('string');
+                    expect(data.type).to.be("");
+                    expect(data.description).to.be.a('string');
+                    expect(data.description).to.be("");
+                    expect(data.value).to.be.a(Object);
+                    expect(data.value).to.be();
+                  }
+                }
+              }
+            }
+            expect(data.creation).to.be.a('number');
+            expect(data.creation).to.be("0");
+            expect(data.start).to.be.a('number');
+            expect(data.start).to.be("0");
+            expect(data.otStatus).to.be.a('string');
+            expect(data.otStatus).to.be("");
+            expect(data.dockerId).to.be.a('string');
+            expect(data.dockerId).to.be("");
+            expect(data.active).to.be.a('boolean');
+            expect(data.active).to.be(false);
+            expect(data.scheduleInfo).to.be.a(Otpixel.ScheduleInfo);
+                  expect(data.scheduleInfo.unit).to.be.a('string');
+              expect(data.scheduleInfo.unit).to.be("");
+              expect(data.scheduleInfo.value).to.be.a('number');
+              expect(data.scheduleInfo.value).to.be(0);
+              expect(data.scheduleInfo.start).to.be.a('number');
+              expect(data.scheduleInfo.start).to.be("0");
+            expect(data.lastEnd).to.be.a('number');
+            expect(data.lastEnd).to.be("0");
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
     });
   });
 

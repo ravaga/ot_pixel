@@ -41,37 +41,15 @@
           /*
           var body = new Otpixel.KPI();
           body.id = "";
+          body.idRef = "";
           body.name = "";
-          body.category = "";
-          body.subcategory = "";
           body.description = "";
-          body.unit = "";
+          body.category = "";
           body.creation = "0";
-          body.ports = [""];
           body.kpiThresholds = new Otpixel.KpiThresholds();
           body.kpiThresholds.lowerThres = 0.0;
           body.kpiThresholds.upperThres = 0.0;
-          body.operation = new Otpixel.KpiOperation();
-          body.operation.mode = "";
-          body.operation.staticMode = new Otpixel.KpiOperationStatic();
-          body.operation.staticMode.value = 0.0;
-          body.operation.staticMode.lastUpdate = "0";
-          body.operation.scheduledMode = new Otpixel.KpiOperationScheduled();
-          body.operation.scheduledMode.idRef = "";
-          body.operation.scheduledMode.type = "";
-          body.operation.scheduledMode.searchforValue = "";
-          body.operation.dynamicMode = new Otpixel.KpiOperationDynamic();
-          body.operation.dynamicMode.inputEndpoint = new Otpixel.InputEndpoint();
-          body.operation.dynamicMode.inputEndpoint.url = "";
-          body.operation.dynamicMode.inputEndpoint.type = "";
-          body.operation.dynamicMode.inputEndpoint.operation = "";
-          body.operation.dynamicMode.inputEndpoint.body = ;
-          body.operation.dynamicMode.inputEndpoint.headers = [new Otpixel.InputHeader()];
-          body.operation.dynamicMode.inputEndpoint.headers[0].key = "";
-          body.operation.dynamicMode.inputEndpoint.headers[0].value = "";
-          body.operation.dynamicMode.searchforValue = "";
-          body.operation.dynamicMode.serchforTimeStampUnix = "";
-          body.operation.dynamicMode.searchforTimeStampIso8601 = "";
+          body.otStatus = "";
 
           instance.createKPI(body, function(error, data, response) {
             if (error) {
@@ -82,77 +60,23 @@
             expect(data).to.be.a(Otpixel.KPI);
             expect(data.id).to.be.a('string');
             expect(data.id).to.be("");
+            expect(data.idRef).to.be.a('string');
+            expect(data.idRef).to.be("");
             expect(data.name).to.be.a('string');
             expect(data.name).to.be("");
-            expect(data.category).to.be.a('string');
-            expect(data.category).to.be("");
-            expect(data.subcategory).to.be.a('string');
-            expect(data.subcategory).to.be("");
             expect(data.description).to.be.a('string');
             expect(data.description).to.be("");
-            expect(data.unit).to.be.a('string');
-            expect(data.unit).to.be("");
+            expect(data.category).to.be.a('string');
+            expect(data.category).to.be("");
             expect(data.creation).to.be.a('number');
             expect(data.creation).to.be("0");
-            {
-              let dataCtr = data.ports;
-              expect(dataCtr).to.be.an(Array);
-              expect(dataCtr).to.not.be.empty();
-              for (let p in dataCtr) {
-                let data = dataCtr[p];
-                expect(data).to.be.a('string');
-                expect(data).to.be("");
-              }
-            }
             expect(data.kpiThresholds).to.be.a(Otpixel.KpiThresholds);
                   expect(data.kpiThresholds.lowerThres).to.be.a('number');
               expect(data.kpiThresholds.lowerThres).to.be(0.0);
               expect(data.kpiThresholds.upperThres).to.be.a('number');
               expect(data.kpiThresholds.upperThres).to.be(0.0);
-            expect(data.operation).to.be.a(Otpixel.KpiOperation);
-                  expect(data.operation.mode).to.be.a('string');
-              expect(data.operation.mode).to.be("");
-              expect(data.operation.staticMode).to.be.a(Otpixel.KpiOperationStatic);
-                    expect(data.operation.staticMode.value).to.be.a('number');
-                expect(data.operation.staticMode.value).to.be(0.0);
-                expect(data.operation.staticMode.lastUpdate).to.be.a('number');
-                expect(data.operation.staticMode.lastUpdate).to.be("0");
-              expect(data.operation.scheduledMode).to.be.a(Otpixel.KpiOperationScheduled);
-                    expect(data.operation.scheduledMode.idRef).to.be.a('string');
-                expect(data.operation.scheduledMode.idRef).to.be("");
-                expect(data.operation.scheduledMode.type).to.be.a('string');
-                expect(data.operation.scheduledMode.type).to.be("");
-                expect(data.operation.scheduledMode.searchforValue).to.be.a('string');
-                expect(data.operation.scheduledMode.searchforValue).to.be("");
-              expect(data.operation.dynamicMode).to.be.a(Otpixel.KpiOperationDynamic);
-                    expect(data.operation.dynamicMode.inputEndpoint).to.be.a(Otpixel.InputEndpoint);
-                      expect(data.operation.dynamicMode.inputEndpoint.url).to.be.a('string');
-                  expect(data.operation.dynamicMode.inputEndpoint.url).to.be("");
-                  expect(data.operation.dynamicMode.inputEndpoint.type).to.be.a('string');
-                  expect(data.operation.dynamicMode.inputEndpoint.type).to.be("");
-                  expect(data.operation.dynamicMode.inputEndpoint.operation).to.be.a('string');
-                  expect(data.operation.dynamicMode.inputEndpoint.operation).to.be("");
-                  expect(data.operation.dynamicMode.inputEndpoint.body).to.be.a(Object);
-                  expect(data.operation.dynamicMode.inputEndpoint.body).to.be();
-                  {
-                    let dataCtr = data.operation.dynamicMode.inputEndpoint.headers;
-                    expect(dataCtr).to.be.an(Array);
-                    expect(dataCtr).to.not.be.empty();
-                    for (let p in dataCtr) {
-                      let data = dataCtr[p];
-                      expect(data).to.be.a(Otpixel.InputHeader);
-                      expect(data.key).to.be.a('string');
-                      expect(data.key).to.be("");
-                      expect(data.value).to.be.a('string');
-                      expect(data.value).to.be("");
-                    }
-                  }
-                expect(data.operation.dynamicMode.searchforValue).to.be.a('string');
-                expect(data.operation.dynamicMode.searchforValue).to.be("");
-                expect(data.operation.dynamicMode.serchforTimeStampUnix).to.be.a('string');
-                expect(data.operation.dynamicMode.serchforTimeStampUnix).to.be("");
-                expect(data.operation.dynamicMode.searchforTimeStampIso8601).to.be.a('string');
-                expect(data.operation.dynamicMode.searchforTimeStampIso8601).to.be("");
+            expect(data.otStatus).to.be.a('string');
+            expect(data.otStatus).to.be("");
 
             done();
           });
@@ -195,130 +119,23 @@
             expect(data).to.be.a(Otpixel.KPI);
             expect(data.id).to.be.a('string');
             expect(data.id).to.be("");
+            expect(data.idRef).to.be.a('string');
+            expect(data.idRef).to.be("");
             expect(data.name).to.be.a('string');
             expect(data.name).to.be("");
-            expect(data.category).to.be.a('string');
-            expect(data.category).to.be("");
-            expect(data.subcategory).to.be.a('string');
-            expect(data.subcategory).to.be("");
             expect(data.description).to.be.a('string');
             expect(data.description).to.be("");
-            expect(data.unit).to.be.a('string');
-            expect(data.unit).to.be("");
+            expect(data.category).to.be.a('string');
+            expect(data.category).to.be("");
             expect(data.creation).to.be.a('number');
             expect(data.creation).to.be("0");
-            {
-              let dataCtr = data.ports;
-              expect(dataCtr).to.be.an(Array);
-              expect(dataCtr).to.not.be.empty();
-              for (let p in dataCtr) {
-                let data = dataCtr[p];
-                expect(data).to.be.a('string');
-                expect(data).to.be("");
-              }
-            }
             expect(data.kpiThresholds).to.be.a(Otpixel.KpiThresholds);
                   expect(data.kpiThresholds.lowerThres).to.be.a('number');
               expect(data.kpiThresholds.lowerThres).to.be(0.0);
               expect(data.kpiThresholds.upperThres).to.be.a('number');
               expect(data.kpiThresholds.upperThres).to.be(0.0);
-            expect(data.operation).to.be.a(Otpixel.KpiOperation);
-                  expect(data.operation.mode).to.be.a('string');
-              expect(data.operation.mode).to.be("");
-              expect(data.operation.staticMode).to.be.a(Otpixel.KpiOperationStatic);
-                    expect(data.operation.staticMode.value).to.be.a('number');
-                expect(data.operation.staticMode.value).to.be(0.0);
-                expect(data.operation.staticMode.lastUpdate).to.be.a('number');
-                expect(data.operation.staticMode.lastUpdate).to.be("0");
-              expect(data.operation.scheduledMode).to.be.a(Otpixel.KpiOperationScheduled);
-                    expect(data.operation.scheduledMode.idRef).to.be.a('string');
-                expect(data.operation.scheduledMode.idRef).to.be("");
-                expect(data.operation.scheduledMode.type).to.be.a('string');
-                expect(data.operation.scheduledMode.type).to.be("");
-                expect(data.operation.scheduledMode.searchforValue).to.be.a('string');
-                expect(data.operation.scheduledMode.searchforValue).to.be("");
-              expect(data.operation.dynamicMode).to.be.a(Otpixel.KpiOperationDynamic);
-                    expect(data.operation.dynamicMode.inputEndpoint).to.be.a(Otpixel.InputEndpoint);
-                      expect(data.operation.dynamicMode.inputEndpoint.url).to.be.a('string');
-                  expect(data.operation.dynamicMode.inputEndpoint.url).to.be("");
-                  expect(data.operation.dynamicMode.inputEndpoint.type).to.be.a('string');
-                  expect(data.operation.dynamicMode.inputEndpoint.type).to.be("");
-                  expect(data.operation.dynamicMode.inputEndpoint.operation).to.be.a('string');
-                  expect(data.operation.dynamicMode.inputEndpoint.operation).to.be("");
-                  expect(data.operation.dynamicMode.inputEndpoint.body).to.be.a(Object);
-                  expect(data.operation.dynamicMode.inputEndpoint.body).to.be();
-                  {
-                    let dataCtr = data.operation.dynamicMode.inputEndpoint.headers;
-                    expect(dataCtr).to.be.an(Array);
-                    expect(dataCtr).to.not.be.empty();
-                    for (let p in dataCtr) {
-                      let data = dataCtr[p];
-                      expect(data).to.be.a(Otpixel.InputHeader);
-                      expect(data.key).to.be.a('string');
-                      expect(data.key).to.be("");
-                      expect(data.value).to.be.a('string');
-                      expect(data.value).to.be("");
-                    }
-                  }
-                expect(data.operation.dynamicMode.searchforValue).to.be.a('string');
-                expect(data.operation.dynamicMode.searchforValue).to.be("");
-                expect(data.operation.dynamicMode.serchforTimeStampUnix).to.be.a('string');
-                expect(data.operation.dynamicMode.serchforTimeStampUnix).to.be("");
-                expect(data.operation.dynamicMode.searchforTimeStampIso8601).to.be.a('string');
-                expect(data.operation.dynamicMode.searchforTimeStampIso8601).to.be("");
-
-            done();
-          });
-          */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
-      describe('getKPILastValueByID', function() {
-        it('should call getKPILastValueByID successfully', function(done) {
-          // TODO: uncomment, update parameter values for getKPILastValueByID call and complete the assertions
-          /*
-          var id = "id_example";
-
-          instance.getKPILastValueByID(id, function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
-            // TODO: update response assertions
-            expect(data).to.be.a(Otpixel.LastKPI);
-            expect(data.value).to.be.a('number');
-            expect(data.value).to.be(0.0);
-            expect(data.lastUpdate).to.be.a('number');
-            expect(data.lastUpdate).to.be("0");
-
-            done();
-          });
-          */
-          // TODO: uncomment and complete method invocation above, then delete this line and the next:
-          done();
-        });
-      });
-      describe('getKPILastValuesByID', function() {
-        it('should call getKPILastValuesByID successfully', function(done) {
-          // TODO: uncomment, update parameter values for getKPILastValuesByID call and complete the assertions
-          /*
-          var id = "id_example";
-
-          instance.getKPILastValuesByID(id, function(error, data, response) {
-            if (error) {
-              done(error);
-              return;
-            }
-            // TODO: update response assertions
-            let dataCtr = data;
-            expect(dataCtr).to.be.an(Array);
-            expect(dataCtr).to.not.be.empty();
-            for (let p in dataCtr) {
-              let data = dataCtr[p];
-              expect(data).to.be.a(Object);
-              // expect(data).to.be(null);
-            }
+            expect(data.otStatus).to.be.a('string');
+            expect(data.otStatus).to.be("");
 
             done();
           });
@@ -348,77 +165,23 @@
               expect(data).to.be.a(Otpixel.KPI);
               expect(data.id).to.be.a('string');
               expect(data.id).to.be("");
+              expect(data.idRef).to.be.a('string');
+              expect(data.idRef).to.be("");
               expect(data.name).to.be.a('string');
               expect(data.name).to.be("");
-              expect(data.category).to.be.a('string');
-              expect(data.category).to.be("");
-              expect(data.subcategory).to.be.a('string');
-              expect(data.subcategory).to.be("");
               expect(data.description).to.be.a('string');
               expect(data.description).to.be("");
-              expect(data.unit).to.be.a('string');
-              expect(data.unit).to.be("");
+              expect(data.category).to.be.a('string');
+              expect(data.category).to.be("");
               expect(data.creation).to.be.a('number');
               expect(data.creation).to.be("0");
-              {
-                let dataCtr = data.ports;
-                expect(dataCtr).to.be.an(Array);
-                expect(dataCtr).to.not.be.empty();
-                for (let p in dataCtr) {
-                  let data = dataCtr[p];
-                  expect(data).to.be.a('string');
-                  expect(data).to.be("");
-                }
-              }
               expect(data.kpiThresholds).to.be.a(Otpixel.KpiThresholds);
                     expect(data.kpiThresholds.lowerThres).to.be.a('number');
                 expect(data.kpiThresholds.lowerThres).to.be(0.0);
                 expect(data.kpiThresholds.upperThres).to.be.a('number');
                 expect(data.kpiThresholds.upperThres).to.be(0.0);
-              expect(data.operation).to.be.a(Otpixel.KpiOperation);
-                    expect(data.operation.mode).to.be.a('string');
-                expect(data.operation.mode).to.be("");
-                expect(data.operation.staticMode).to.be.a(Otpixel.KpiOperationStatic);
-                      expect(data.operation.staticMode.value).to.be.a('number');
-                  expect(data.operation.staticMode.value).to.be(0.0);
-                  expect(data.operation.staticMode.lastUpdate).to.be.a('number');
-                  expect(data.operation.staticMode.lastUpdate).to.be("0");
-                expect(data.operation.scheduledMode).to.be.a(Otpixel.KpiOperationScheduled);
-                      expect(data.operation.scheduledMode.idRef).to.be.a('string');
-                  expect(data.operation.scheduledMode.idRef).to.be("");
-                  expect(data.operation.scheduledMode.type).to.be.a('string');
-                  expect(data.operation.scheduledMode.type).to.be("");
-                  expect(data.operation.scheduledMode.searchforValue).to.be.a('string');
-                  expect(data.operation.scheduledMode.searchforValue).to.be("");
-                expect(data.operation.dynamicMode).to.be.a(Otpixel.KpiOperationDynamic);
-                      expect(data.operation.dynamicMode.inputEndpoint).to.be.a(Otpixel.InputEndpoint);
-                        expect(data.operation.dynamicMode.inputEndpoint.url).to.be.a('string');
-                    expect(data.operation.dynamicMode.inputEndpoint.url).to.be("");
-                    expect(data.operation.dynamicMode.inputEndpoint.type).to.be.a('string');
-                    expect(data.operation.dynamicMode.inputEndpoint.type).to.be("");
-                    expect(data.operation.dynamicMode.inputEndpoint.operation).to.be.a('string');
-                    expect(data.operation.dynamicMode.inputEndpoint.operation).to.be("");
-                    expect(data.operation.dynamicMode.inputEndpoint.body).to.be.a(Object);
-                    expect(data.operation.dynamicMode.inputEndpoint.body).to.be();
-                    {
-                      let dataCtr = data.operation.dynamicMode.inputEndpoint.headers;
-                      expect(dataCtr).to.be.an(Array);
-                      expect(dataCtr).to.not.be.empty();
-                      for (let p in dataCtr) {
-                        let data = dataCtr[p];
-                        expect(data).to.be.a(Otpixel.InputHeader);
-                        expect(data.key).to.be.a('string');
-                        expect(data.key).to.be("");
-                        expect(data.value).to.be.a('string');
-                        expect(data.value).to.be("");
-                      }
-                    }
-                  expect(data.operation.dynamicMode.searchforValue).to.be.a('string');
-                  expect(data.operation.dynamicMode.searchforValue).to.be("");
-                  expect(data.operation.dynamicMode.serchforTimeStampUnix).to.be.a('string');
-                  expect(data.operation.dynamicMode.serchforTimeStampUnix).to.be("");
-                  expect(data.operation.dynamicMode.searchforTimeStampIso8601).to.be.a('string');
-                  expect(data.operation.dynamicMode.searchforTimeStampIso8601).to.be("");
+              expect(data.otStatus).to.be.a('string');
+              expect(data.otStatus).to.be("");
             }
 
             done();
@@ -434,37 +197,15 @@
           /*
           var body = new Otpixel.KPI();
           body.id = "";
+          body.idRef = "";
           body.name = "";
-          body.category = "";
-          body.subcategory = "";
           body.description = "";
-          body.unit = "";
+          body.category = "";
           body.creation = "0";
-          body.ports = [""];
           body.kpiThresholds = new Otpixel.KpiThresholds();
           body.kpiThresholds.lowerThres = 0.0;
           body.kpiThresholds.upperThres = 0.0;
-          body.operation = new Otpixel.KpiOperation();
-          body.operation.mode = "";
-          body.operation.staticMode = new Otpixel.KpiOperationStatic();
-          body.operation.staticMode.value = 0.0;
-          body.operation.staticMode.lastUpdate = "0";
-          body.operation.scheduledMode = new Otpixel.KpiOperationScheduled();
-          body.operation.scheduledMode.idRef = "";
-          body.operation.scheduledMode.type = "";
-          body.operation.scheduledMode.searchforValue = "";
-          body.operation.dynamicMode = new Otpixel.KpiOperationDynamic();
-          body.operation.dynamicMode.inputEndpoint = new Otpixel.InputEndpoint();
-          body.operation.dynamicMode.inputEndpoint.url = "";
-          body.operation.dynamicMode.inputEndpoint.type = "";
-          body.operation.dynamicMode.inputEndpoint.operation = "";
-          body.operation.dynamicMode.inputEndpoint.body = ;
-          body.operation.dynamicMode.inputEndpoint.headers = [new Otpixel.InputHeader()];
-          body.operation.dynamicMode.inputEndpoint.headers[0].key = "";
-          body.operation.dynamicMode.inputEndpoint.headers[0].value = "";
-          body.operation.dynamicMode.searchforValue = "";
-          body.operation.dynamicMode.serchforTimeStampUnix = "";
-          body.operation.dynamicMode.searchforTimeStampIso8601 = "";
+          body.otStatus = "";
 
           instance.updateKPI(body, function(error, data, response) {
             if (error) {
@@ -475,77 +216,23 @@
             expect(data).to.be.a(Otpixel.KPI);
             expect(data.id).to.be.a('string');
             expect(data.id).to.be("");
+            expect(data.idRef).to.be.a('string');
+            expect(data.idRef).to.be("");
             expect(data.name).to.be.a('string');
             expect(data.name).to.be("");
-            expect(data.category).to.be.a('string');
-            expect(data.category).to.be("");
-            expect(data.subcategory).to.be.a('string');
-            expect(data.subcategory).to.be("");
             expect(data.description).to.be.a('string');
             expect(data.description).to.be("");
-            expect(data.unit).to.be.a('string');
-            expect(data.unit).to.be("");
+            expect(data.category).to.be.a('string');
+            expect(data.category).to.be("");
             expect(data.creation).to.be.a('number');
             expect(data.creation).to.be("0");
-            {
-              let dataCtr = data.ports;
-              expect(dataCtr).to.be.an(Array);
-              expect(dataCtr).to.not.be.empty();
-              for (let p in dataCtr) {
-                let data = dataCtr[p];
-                expect(data).to.be.a('string');
-                expect(data).to.be("");
-              }
-            }
             expect(data.kpiThresholds).to.be.a(Otpixel.KpiThresholds);
                   expect(data.kpiThresholds.lowerThres).to.be.a('number');
               expect(data.kpiThresholds.lowerThres).to.be(0.0);
               expect(data.kpiThresholds.upperThres).to.be.a('number');
               expect(data.kpiThresholds.upperThres).to.be(0.0);
-            expect(data.operation).to.be.a(Otpixel.KpiOperation);
-                  expect(data.operation.mode).to.be.a('string');
-              expect(data.operation.mode).to.be("");
-              expect(data.operation.staticMode).to.be.a(Otpixel.KpiOperationStatic);
-                    expect(data.operation.staticMode.value).to.be.a('number');
-                expect(data.operation.staticMode.value).to.be(0.0);
-                expect(data.operation.staticMode.lastUpdate).to.be.a('number');
-                expect(data.operation.staticMode.lastUpdate).to.be("0");
-              expect(data.operation.scheduledMode).to.be.a(Otpixel.KpiOperationScheduled);
-                    expect(data.operation.scheduledMode.idRef).to.be.a('string');
-                expect(data.operation.scheduledMode.idRef).to.be("");
-                expect(data.operation.scheduledMode.type).to.be.a('string');
-                expect(data.operation.scheduledMode.type).to.be("");
-                expect(data.operation.scheduledMode.searchforValue).to.be.a('string');
-                expect(data.operation.scheduledMode.searchforValue).to.be("");
-              expect(data.operation.dynamicMode).to.be.a(Otpixel.KpiOperationDynamic);
-                    expect(data.operation.dynamicMode.inputEndpoint).to.be.a(Otpixel.InputEndpoint);
-                      expect(data.operation.dynamicMode.inputEndpoint.url).to.be.a('string');
-                  expect(data.operation.dynamicMode.inputEndpoint.url).to.be("");
-                  expect(data.operation.dynamicMode.inputEndpoint.type).to.be.a('string');
-                  expect(data.operation.dynamicMode.inputEndpoint.type).to.be("");
-                  expect(data.operation.dynamicMode.inputEndpoint.operation).to.be.a('string');
-                  expect(data.operation.dynamicMode.inputEndpoint.operation).to.be("");
-                  expect(data.operation.dynamicMode.inputEndpoint.body).to.be.a(Object);
-                  expect(data.operation.dynamicMode.inputEndpoint.body).to.be();
-                  {
-                    let dataCtr = data.operation.dynamicMode.inputEndpoint.headers;
-                    expect(dataCtr).to.be.an(Array);
-                    expect(dataCtr).to.not.be.empty();
-                    for (let p in dataCtr) {
-                      let data = dataCtr[p];
-                      expect(data).to.be.a(Otpixel.InputHeader);
-                      expect(data.key).to.be.a('string');
-                      expect(data.key).to.be("");
-                      expect(data.value).to.be.a('string');
-                      expect(data.value).to.be("");
-                    }
-                  }
-                expect(data.operation.dynamicMode.searchforValue).to.be.a('string');
-                expect(data.operation.dynamicMode.searchforValue).to.be("");
-                expect(data.operation.dynamicMode.serchforTimeStampUnix).to.be.a('string');
-                expect(data.operation.dynamicMode.serchforTimeStampUnix).to.be("");
-                expect(data.operation.dynamicMode.searchforTimeStampIso8601).to.be.a('string');
-                expect(data.operation.dynamicMode.searchforTimeStampIso8601).to.be("");
+            expect(data.otStatus).to.be.a('string');
+            expect(data.otStatus).to.be("");
 
             done();
           });

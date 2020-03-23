@@ -284,6 +284,61 @@
         authNames, contentTypes, accepts, returnType, callback
       );
     }
+
+    /**
+     * Callback function to receive the result of the updateStatusScheduledInstance operation.
+     * @callback module:api/ScheduledInstanceResourceApi~updateStatusScheduledInstanceCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ScheduledInstance} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Update only the status of a scheduled instance
+     * 
+     * @param {String} id ID of scheduled instance
+     * @param {String} status status
+     * @param {module:api/ScheduledInstanceResourceApi~updateStatusScheduledInstanceCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ScheduledInstance}
+     */
+    this.updateStatusScheduledInstance = function(id, status, callback) {
+      var postBody = null;
+
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling updateStatusScheduledInstance");
+      }
+
+      // verify the required parameter 'status' is set
+      if (status === undefined || status === null) {
+        throw new Error("Missing the required parameter 'status' when calling updateStatusScheduledInstance");
+      }
+
+
+      var pathParams = {
+        'id': id,
+        'status': status
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['apikey'];
+      var contentTypes = [];
+      var accepts = [];
+      var returnType = ScheduledInstance;
+
+      return this.apiClient.callApi(
+        '/scheduledInstances/updateStatus/{id}', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
   };
 
   return exports;

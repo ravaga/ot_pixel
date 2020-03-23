@@ -16,12 +16,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ConnectorItem', 'model/ConnectorOptionItem', 'model/DockerInfo', 'model/GeneralInfo', 'model/InputEndpoint', 'model/InputHeader', 'model/InputItem', 'model/InputOptionItem', 'model/Instance', 'model/InstanceForceInputItem', 'model/InstanceInputItem', 'model/InstanceInputOptionItem', 'model/InstanceLoggingItem', 'model/InstanceLoggingOptionItem', 'model/InstanceOutputItem', 'model/InstanceOutputOptionItem', 'model/KPI', 'model/KpiOperation', 'model/KpiOperationDynamic', 'model/KpiOperationScheduled', 'model/KpiOperationStatic', 'model/KpiThresholds', 'model/LastKPI', 'model/LoggingItem', 'model/LoggingOptionItem', 'model/Model', 'model/OutputItem', 'model/OutputOptionItem', 'model/ScheduleInfo', 'model/ScheduledInstance', 'model/SupportedTransformationItem', 'model/SystemInfo', 'model/Transform', 'api/InstanceResourceApi', 'api/KPIResourceApi', 'api/ModelResourceApi', 'api/ScheduledInstanceResourceApi'], factory);
+    define(['ApiClient', 'model/ConnectorItem', 'model/ConnectorOptionItem', 'model/DockerInfo', 'model/GeneralInfo', 'model/InputItem', 'model/InputOptionItem', 'model/Instance', 'model/InstanceForceInputItem', 'model/InstanceInputItem', 'model/InstanceInputOptionItem', 'model/InstanceLoggingItem', 'model/InstanceLoggingOptionItem', 'model/InstanceOutputItem', 'model/InstanceOutputOptionItem', 'model/KPI', 'model/KpiThresholds', 'model/LoggingItem', 'model/LoggingOptionItem', 'model/Model', 'model/OutputItem', 'model/OutputOptionItem', 'model/ScheduleInfo', 'model/ScheduledInstance', 'model/SupportedTransformationItem', 'model/SystemInfo', 'model/Transform', 'api/InstanceResourceApi', 'api/KPIResourceApi', 'api/ModelResourceApi', 'api/ScheduledInstanceResourceApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/ConnectorItem'), require('./model/ConnectorOptionItem'), require('./model/DockerInfo'), require('./model/GeneralInfo'), require('./model/InputEndpoint'), require('./model/InputHeader'), require('./model/InputItem'), require('./model/InputOptionItem'), require('./model/Instance'), require('./model/InstanceForceInputItem'), require('./model/InstanceInputItem'), require('./model/InstanceInputOptionItem'), require('./model/InstanceLoggingItem'), require('./model/InstanceLoggingOptionItem'), require('./model/InstanceOutputItem'), require('./model/InstanceOutputOptionItem'), require('./model/KPI'), require('./model/KpiOperation'), require('./model/KpiOperationDynamic'), require('./model/KpiOperationScheduled'), require('./model/KpiOperationStatic'), require('./model/KpiThresholds'), require('./model/LastKPI'), require('./model/LoggingItem'), require('./model/LoggingOptionItem'), require('./model/Model'), require('./model/OutputItem'), require('./model/OutputOptionItem'), require('./model/ScheduleInfo'), require('./model/ScheduledInstance'), require('./model/SupportedTransformationItem'), require('./model/SystemInfo'), require('./model/Transform'), require('./api/InstanceResourceApi'), require('./api/KPIResourceApi'), require('./api/ModelResourceApi'), require('./api/ScheduledInstanceResourceApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/ConnectorItem'), require('./model/ConnectorOptionItem'), require('./model/DockerInfo'), require('./model/GeneralInfo'), require('./model/InputItem'), require('./model/InputOptionItem'), require('./model/Instance'), require('./model/InstanceForceInputItem'), require('./model/InstanceInputItem'), require('./model/InstanceInputOptionItem'), require('./model/InstanceLoggingItem'), require('./model/InstanceLoggingOptionItem'), require('./model/InstanceOutputItem'), require('./model/InstanceOutputOptionItem'), require('./model/KPI'), require('./model/KpiThresholds'), require('./model/LoggingItem'), require('./model/LoggingOptionItem'), require('./model/Model'), require('./model/OutputItem'), require('./model/OutputOptionItem'), require('./model/ScheduleInfo'), require('./model/ScheduledInstance'), require('./model/SupportedTransformationItem'), require('./model/SystemInfo'), require('./model/Transform'), require('./api/InstanceResourceApi'), require('./api/KPIResourceApi'), require('./api/ModelResourceApi'), require('./api/ScheduledInstanceResourceApi'));
   }
-}(function(ApiClient, ConnectorItem, ConnectorOptionItem, DockerInfo, GeneralInfo, InputEndpoint, InputHeader, InputItem, InputOptionItem, Instance, InstanceForceInputItem, InstanceInputItem, InstanceInputOptionItem, InstanceLoggingItem, InstanceLoggingOptionItem, InstanceOutputItem, InstanceOutputOptionItem, KPI, KpiOperation, KpiOperationDynamic, KpiOperationScheduled, KpiOperationStatic, KpiThresholds, LastKPI, LoggingItem, LoggingOptionItem, Model, OutputItem, OutputOptionItem, ScheduleInfo, ScheduledInstance, SupportedTransformationItem, SystemInfo, Transform, InstanceResourceApi, KPIResourceApi, ModelResourceApi, ScheduledInstanceResourceApi) {
+}(function(ApiClient, ConnectorItem, ConnectorOptionItem, DockerInfo, GeneralInfo, InputItem, InputOptionItem, Instance, InstanceForceInputItem, InstanceInputItem, InstanceInputOptionItem, InstanceLoggingItem, InstanceLoggingOptionItem, InstanceOutputItem, InstanceOutputOptionItem, KPI, KpiThresholds, LoggingItem, LoggingOptionItem, Model, OutputItem, OutputOptionItem, ScheduleInfo, ScheduledInstance, SupportedTransformationItem, SystemInfo, Transform, InstanceResourceApi, KPIResourceApi, ModelResourceApi, ScheduledInstanceResourceApi) {
   'use strict';
 
   /**
@@ -82,16 +82,6 @@
      */
     GeneralInfo: GeneralInfo,
     /**
-     * The InputEndpoint model constructor.
-     * @property {module:model/InputEndpoint}
-     */
-    InputEndpoint: InputEndpoint,
-    /**
-     * The InputHeader model constructor.
-     * @property {module:model/InputHeader}
-     */
-    InputHeader: InputHeader,
-    /**
      * The InputItem model constructor.
      * @property {module:model/InputItem}
      */
@@ -147,35 +137,10 @@
      */
     KPI: KPI,
     /**
-     * The KpiOperation model constructor.
-     * @property {module:model/KpiOperation}
-     */
-    KpiOperation: KpiOperation,
-    /**
-     * The KpiOperationDynamic model constructor.
-     * @property {module:model/KpiOperationDynamic}
-     */
-    KpiOperationDynamic: KpiOperationDynamic,
-    /**
-     * The KpiOperationScheduled model constructor.
-     * @property {module:model/KpiOperationScheduled}
-     */
-    KpiOperationScheduled: KpiOperationScheduled,
-    /**
-     * The KpiOperationStatic model constructor.
-     * @property {module:model/KpiOperationStatic}
-     */
-    KpiOperationStatic: KpiOperationStatic,
-    /**
      * The KpiThresholds model constructor.
      * @property {module:model/KpiThresholds}
      */
     KpiThresholds: KpiThresholds,
-    /**
-     * The LastKPI model constructor.
-     * @property {module:model/LastKPI}
-     */
-    LastKPI: LastKPI,
     /**
      * The LoggingItem model constructor.
      * @property {module:model/LoggingItem}

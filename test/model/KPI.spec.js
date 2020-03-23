@@ -46,22 +46,16 @@
         // expect(instance.id).to.be(expectedValueLiteral);
       });
 
+      it('should have the property idRef (base name: "idRef")', function() {
+        // TODO: update the code to test the property idRef
+        expect(instance).to.have.property('idRef');
+        // expect(instance.idRef).to.be(expectedValueLiteral);
+      });
+
       it('should have the property name (base name: "name")', function() {
         // TODO: update the code to test the property name
         expect(instance).to.have.property('name');
         // expect(instance.name).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property category (base name: "category")', function() {
-        // TODO: update the code to test the property category
-        expect(instance).to.have.property('category');
-        // expect(instance.category).to.be(expectedValueLiteral);
-      });
-
-      it('should have the property subcategory (base name: "subcategory")', function() {
-        // TODO: update the code to test the property subcategory
-        expect(instance).to.have.property('subcategory');
-        // expect(instance.subcategory).to.be(expectedValueLiteral);
       });
 
       it('should have the property description (base name: "description")', function() {
@@ -70,10 +64,10 @@
         // expect(instance.description).to.be(expectedValueLiteral);
       });
 
-      it('should have the property unit (base name: "unit")', function() {
-        // TODO: update the code to test the property unit
-        expect(instance).to.have.property('unit');
-        // expect(instance.unit).to.be(expectedValueLiteral);
+      it('should have the property category (base name: "category")', function() {
+        // TODO: update the code to test the property category
+        expect(instance).to.have.property('category');
+        // expect(instance.category).to.be(expectedValueLiteral);
       });
 
       it('should have the property creation (base name: "creation")', function() {
@@ -82,22 +76,16 @@
         // expect(instance.creation).to.be(expectedValueLiteral);
       });
 
-      it('should have the property ports (base name: "ports")', function() {
-        // TODO: update the code to test the property ports
-        expect(instance).to.have.property('ports');
-        // expect(instance.ports).to.be(expectedValueLiteral);
-      });
-
       it('should have the property kpiThresholds (base name: "kpiThresholds")', function() {
         // TODO: update the code to test the property kpiThresholds
         expect(instance).to.have.property('kpiThresholds');
         // expect(instance.kpiThresholds).to.be(expectedValueLiteral);
       });
 
-      it('should have the property operation (base name: "operation")', function() {
-        // TODO: update the code to test the property operation
-        expect(instance).to.have.property('operation');
-        // expect(instance.operation).to.be(expectedValueLiteral);
+      it('should have the property otStatus (base name: "otStatus")', function() {
+        // TODO: update the code to test the property otStatus
+        expect(instance).to.have.property('otStatus');
+        // expect(instance.otStatus).to.be(expectedValueLiteral);
       });
 
     });

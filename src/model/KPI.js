@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/KpiOperation', 'model/KpiThresholds'], factory);
+    define(['ApiClient', 'model/KpiThresholds'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./KpiOperation'), require('./KpiThresholds'));
+    module.exports = factory(require('../ApiClient'), require('./KpiThresholds'));
   } else {
     // Browser globals (root is window)
     if (!root.Otpixel) {
       root.Otpixel = {};
     }
-    root.Otpixel.KPI = factory(root.Otpixel.ApiClient, root.Otpixel.KpiOperation, root.Otpixel.KpiThresholds);
+    root.Otpixel.KPI = factory(root.Otpixel.ApiClient, root.Otpixel.KpiThresholds);
   }
-}(this, function(ApiClient, KpiOperation, KpiThresholds) {
+}(this, function(ApiClient, KpiThresholds) {
   'use strict';
 
   /**
@@ -56,24 +56,20 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('id'))
         obj.id = ApiClient.convertToType(data['id'], 'String');
+      if (data.hasOwnProperty('idRef'))
+        obj.idRef = ApiClient.convertToType(data['idRef'], 'String');
       if (data.hasOwnProperty('name'))
         obj.name = ApiClient.convertToType(data['name'], 'String');
-      if (data.hasOwnProperty('category'))
-        obj.category = ApiClient.convertToType(data['category'], 'String');
-      if (data.hasOwnProperty('subcategory'))
-        obj.subcategory = ApiClient.convertToType(data['subcategory'], 'String');
       if (data.hasOwnProperty('description'))
         obj.description = ApiClient.convertToType(data['description'], 'String');
-      if (data.hasOwnProperty('unit'))
-        obj.unit = ApiClient.convertToType(data['unit'], 'String');
+      if (data.hasOwnProperty('category'))
+        obj.category = ApiClient.convertToType(data['category'], 'String');
       if (data.hasOwnProperty('creation'))
         obj.creation = ApiClient.convertToType(data['creation'], 'Number');
-      if (data.hasOwnProperty('ports'))
-        obj.ports = ApiClient.convertToType(data['ports'], ['String']);
       if (data.hasOwnProperty('kpiThresholds'))
         obj.kpiThresholds = KpiThresholds.constructFromObject(data['kpiThresholds']);
-      if (data.hasOwnProperty('operation'))
-        obj.operation = KpiOperation.constructFromObject(data['operation']);
+      if (data.hasOwnProperty('otStatus'))
+        obj.otStatus = ApiClient.convertToType(data['otStatus'], 'String');
     }
     return obj;
   }
@@ -84,19 +80,14 @@
   exports.prototype.id = undefined;
 
   /**
+   * @member {String} idRef
+   */
+  exports.prototype.idRef = undefined;
+
+  /**
    * @member {String} name
    */
   exports.prototype.name = undefined;
-
-  /**
-   * @member {String} category
-   */
-  exports.prototype.category = undefined;
-
-  /**
-   * @member {String} subcategory
-   */
-  exports.prototype.subcategory = undefined;
 
   /**
    * @member {String} description
@@ -104,9 +95,9 @@
   exports.prototype.description = undefined;
 
   /**
-   * @member {String} unit
+   * @member {String} category
    */
-  exports.prototype.unit = undefined;
+  exports.prototype.category = undefined;
 
   /**
    * @member {Number} creation
@@ -114,19 +105,14 @@
   exports.prototype.creation = undefined;
 
   /**
-   * @member {Array.<String>} ports
-   */
-  exports.prototype.ports = undefined;
-
-  /**
    * @member {module:model/KpiThresholds} kpiThresholds
    */
   exports.prototype.kpiThresholds = undefined;
 
   /**
-   * @member {module:model/KpiOperation} operation
+   * @member {String} otStatus
    */
-  exports.prototype.operation = undefined;
+  exports.prototype.otStatus = undefined;
 
   return exports;
 

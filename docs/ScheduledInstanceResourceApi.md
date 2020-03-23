@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**getScheduledInstance**](ScheduledInstanceResourceApi.md#getScheduledInstance) | **GET** /scheduledInstances/get/{id} | Get a scheduled instance by id
 [**listScheduledInstances**](ScheduledInstanceResourceApi.md#listScheduledInstances) | **GET** /scheduledInstances/list | List all scheduled instances
 [**updateScheduledInstance**](ScheduledInstanceResourceApi.md#updateScheduledInstance) | **POST** /scheduledInstances/update | Update a scheduled instance
+[**updateStatusScheduledInstance**](ScheduledInstanceResourceApi.md#updateStatusScheduledInstance) | **POST** /scheduledInstances/updateStatus/{id} | Update only the status of a scheduled instance
 
 
 <a name="createScheduledInstance"></a>
@@ -280,4 +281,60 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: application/json
  - **Accept**: application/json
+
+<a name="updateStatusScheduledInstance"></a>
+# **updateStatusScheduledInstance**
+> ScheduledInstance updateStatusScheduledInstance(id, status)
+
+Update only the status of a scheduled instance
+
+
+
+### Example
+```javascript
+var Otpixel = require('otpixel');
+var defaultClient = Otpixel.ApiClient.instance;
+
+// Configure API key authorization: apikey
+var apikey = defaultClient.authentications['apikey'];
+apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apikey.apiKeyPrefix = 'Token';
+
+var apiInstance = new Otpixel.ScheduledInstanceResourceApi();
+
+var id = "id_example"; // String | ID of scheduled instance
+
+var status = "status_example"; // String | status
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.updateStatusScheduledInstance(id, status, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| ID of scheduled instance | 
+ **status** | **String**| status | 
+
+### Return type
+
+[**ScheduledInstance**](ScheduledInstance.md)
+
+### Authorization
+
+[apikey](../README.md#apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 

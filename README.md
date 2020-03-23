@@ -133,8 +133,6 @@ Class | Method | HTTP request | Description
 *Otpixel.KPIResourceApi* | [**createKPI**](docs/KPIResourceApi.md#createKPI) | **PUT** /kpis/create | Create a KPI
 *Otpixel.KPIResourceApi* | [**deleteKPI**](docs/KPIResourceApi.md#deleteKPI) | **DELETE** /kpis/delete/{id} | Delete a kpi
 *Otpixel.KPIResourceApi* | [**getKPIByID**](docs/KPIResourceApi.md#getKPIByID) | **GET** /kpis/get/{id} | Get a KPI by id
-*Otpixel.KPIResourceApi* | [**getKPILastValueByID**](docs/KPIResourceApi.md#getKPILastValueByID) | **GET** /kpis/get/{id}/lastValue | Get the last value of a KPI by id
-*Otpixel.KPIResourceApi* | [**getKPILastValuesByID**](docs/KPIResourceApi.md#getKPILastValuesByID) | **GET** /kpis/get/{id}/lastValues | Get the last value of a KPI by id
 *Otpixel.KPIResourceApi* | [**listKPIs**](docs/KPIResourceApi.md#listKPIs) | **GET** /kpis/list | List all models
 *Otpixel.KPIResourceApi* | [**updateKPI**](docs/KPIResourceApi.md#updateKPI) | **POST** /kpis/update | Update a kpi
 *Otpixel.ModelResourceApi* | [**createModel**](docs/ModelResourceApi.md#createModel) | **PUT** /models/create | Create a model
@@ -148,6 +146,7 @@ Class | Method | HTTP request | Description
 *Otpixel.ScheduledInstanceResourceApi* | [**getScheduledInstance**](docs/ScheduledInstanceResourceApi.md#getScheduledInstance) | **GET** /scheduledInstances/get/{id} | Get a scheduled instance by id
 *Otpixel.ScheduledInstanceResourceApi* | [**listScheduledInstances**](docs/ScheduledInstanceResourceApi.md#listScheduledInstances) | **GET** /scheduledInstances/list | List all scheduled instances
 *Otpixel.ScheduledInstanceResourceApi* | [**updateScheduledInstance**](docs/ScheduledInstanceResourceApi.md#updateScheduledInstance) | **POST** /scheduledInstances/update | Update a scheduled instance
+*Otpixel.ScheduledInstanceResourceApi* | [**updateStatusScheduledInstance**](docs/ScheduledInstanceResourceApi.md#updateStatusScheduledInstance) | **POST** /scheduledInstances/updateStatus/{id} | Update only the status of a scheduled instance
 
 
 ## Documentation for Models
@@ -156,8 +155,6 @@ Class | Method | HTTP request | Description
  - [Otpixel.ConnectorOptionItem](docs/ConnectorOptionItem.md)
  - [Otpixel.DockerInfo](docs/DockerInfo.md)
  - [Otpixel.GeneralInfo](docs/GeneralInfo.md)
- - [Otpixel.InputEndpoint](docs/InputEndpoint.md)
- - [Otpixel.InputHeader](docs/InputHeader.md)
  - [Otpixel.InputItem](docs/InputItem.md)
  - [Otpixel.InputOptionItem](docs/InputOptionItem.md)
  - [Otpixel.Instance](docs/Instance.md)
@@ -169,12 +166,7 @@ Class | Method | HTTP request | Description
  - [Otpixel.InstanceOutputItem](docs/InstanceOutputItem.md)
  - [Otpixel.InstanceOutputOptionItem](docs/InstanceOutputOptionItem.md)
  - [Otpixel.KPI](docs/KPI.md)
- - [Otpixel.KpiOperation](docs/KpiOperation.md)
- - [Otpixel.KpiOperationDynamic](docs/KpiOperationDynamic.md)
- - [Otpixel.KpiOperationScheduled](docs/KpiOperationScheduled.md)
- - [Otpixel.KpiOperationStatic](docs/KpiOperationStatic.md)
  - [Otpixel.KpiThresholds](docs/KpiThresholds.md)
- - [Otpixel.LastKPI](docs/LastKPI.md)
  - [Otpixel.LoggingItem](docs/LoggingItem.md)
  - [Otpixel.LoggingOptionItem](docs/LoggingOptionItem.md)
  - [Otpixel.Model](docs/Model.md)
