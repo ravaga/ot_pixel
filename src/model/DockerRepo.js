@@ -25,66 +25,59 @@
     if (!root.Otpixel) {
       root.Otpixel = {};
     }
-    root.Otpixel.InstanceLoggingOptionItem = factory(root.Otpixel.ApiClient);
+    root.Otpixel.DockerRepo = factory(root.Otpixel.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
 
   /**
-   * The InstanceLoggingOptionItem model module.
-   * @module model/InstanceLoggingOptionItem
+   * The DockerRepo model module.
+   * @module model/DockerRepo
    * @version 0.6.0
    */
 
   /**
-   * Constructs a new <code>InstanceLoggingOptionItem</code>.
-   * @alias module:model/InstanceLoggingOptionItem
+   * Constructs a new <code>DockerRepo</code>.
+   * @alias module:model/DockerRepo
    * @class
    */
   var exports = function() {
   };
 
   /**
-   * Constructs a <code>InstanceLoggingOptionItem</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>DockerRepo</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/InstanceLoggingOptionItem} obj Optional instance to populate.
-   * @return {module:model/InstanceLoggingOptionItem} The populated <code>InstanceLoggingOptionItem</code> instance.
+   * @param {module:model/DockerRepo} obj Optional instance to populate.
+   * @return {module:model/DockerRepo} The populated <code>DockerRepo</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('name'))
-        obj.name = ApiClient.convertToType(data['name'], 'String');
-      if (data.hasOwnProperty('type'))
-        obj.type = ApiClient.convertToType(data['type'], 'String');
-      if (data.hasOwnProperty('description'))
-        obj.description = ApiClient.convertToType(data['description'], 'String');
-      if (data.hasOwnProperty('value'))
-        obj.value = ApiClient.convertToType(data['value'], Object);
+      if (data.hasOwnProperty('url'))
+        obj.url = ApiClient.convertToType(data['url'], 'String');
+      if (data.hasOwnProperty('user'))
+        obj.user = ApiClient.convertToType(data['user'], 'String');
+      if (data.hasOwnProperty('password'))
+        obj.password = ApiClient.convertToType(data['password'], 'String');
     }
     return obj;
   }
 
   /**
-   * @member {String} name
+   * @member {String} url
    */
-  exports.prototype.name = undefined;
+  exports.prototype.url = undefined;
 
   /**
-   * @member {String} type
+   * @member {String} user
    */
-  exports.prototype.type = undefined;
+  exports.prototype.user = undefined;
 
   /**
-   * @member {String} description
+   * @member {String} password
    */
-  exports.prototype.description = undefined;
-
-  /**
-   * @member {Object} value
-   */
-  exports.prototype.value = undefined;
+  exports.prototype.password = undefined;
 
   return exports;
 

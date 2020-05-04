@@ -7,6 +7,8 @@ Method | HTTP request | Description
 [**createKPI**](KPIResourceApi.md#createKPI) | **PUT** /kpis/create | Create a KPI
 [**deleteKPI**](KPIResourceApi.md#deleteKPI) | **DELETE** /kpis/delete/{id} | Delete a kpi
 [**getKPIByID**](KPIResourceApi.md#getKPIByID) | **GET** /kpis/get/{id} | Get a KPI by id
+[**getKPIStatsByID**](KPIResourceApi.md#getKPIStatsByID) | **GET** /kpis/get/{id}/stats | Get stats a KPI
+[**getLastKPIByID**](KPIResourceApi.md#getLastKPIByID) | **GET** /kpis/get/{id}/lastKPI | Get the last value of a KPI by id
 [**listKPIs**](KPIResourceApi.md#listKPIs) | **GET** /kpis/list | List all models
 [**updateKPI**](KPIResourceApi.md#updateKPI) | **POST** /kpis/update | Update a kpi
 
@@ -160,6 +162,118 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**KPI**](KPI.md)
+
+### Authorization
+
+[apikey](../README.md#apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="getKPIStatsByID"></a>
+# **getKPIStatsByID**
+> JsonNode getKPIStatsByID(id, opts)
+
+Get stats a KPI
+
+
+
+### Example
+```javascript
+var Otpixel = require('otpixel');
+var defaultClient = Otpixel.ApiClient.instance;
+
+// Configure API key authorization: apikey
+var apikey = defaultClient.authentications['apikey'];
+apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apikey.apiKeyPrefix = 'Token';
+
+var apiInstance = new Otpixel.KPIResourceApi();
+
+var id = "id_example"; // String | kpi
+
+var opts = { 
+  'from': "from_example", // String | from
+  'to': "to_example" // String | to
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.getKPIStatsByID(id, opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| kpi | 
+ **from** | **String**| from | [optional] 
+ **to** | **String**| to | [optional] 
+
+### Return type
+
+[**JsonNode**](JsonNode.md)
+
+### Authorization
+
+[apikey](../README.md#apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="getLastKPIByID"></a>
+# **getLastKPIByID**
+> JsonNode getLastKPIByID(id)
+
+Get the last value of a KPI by id
+
+
+
+### Example
+```javascript
+var Otpixel = require('otpixel');
+var defaultClient = Otpixel.ApiClient.instance;
+
+// Configure API key authorization: apikey
+var apikey = defaultClient.authentications['apikey'];
+apikey.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apikey.apiKeyPrefix = 'Token';
+
+var apiInstance = new Otpixel.KPIResourceApi();
+
+var id = "id_example"; // String | kpi
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.getLastKPIByID(id, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| kpi | 
+
+### Return type
+
+[**JsonNode**](JsonNode.md)
 
 ### Authorization
 

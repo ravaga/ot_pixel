@@ -30,32 +30,32 @@
   var instance;
 
   describe('(package)', function() {
-    describe('ScheduleInfo', function() {
+    describe('DockerRepo', function() {
       beforeEach(function() {
-        instance = new Otpixel.ScheduleInfo();
+        instance = new Otpixel.DockerRepo();
       });
 
-      it('should create an instance of ScheduleInfo', function() {
-        // TODO: update the code to test ScheduleInfo
-        expect(instance).to.be.a(Otpixel.ScheduleInfo);
+      it('should create an instance of DockerRepo', function() {
+        // TODO: update the code to test DockerRepo
+        expect(instance).to.be.a(Otpixel.DockerRepo);
       });
 
-      it('should have the property unit (base name: "unit")', function() {
-        // TODO: update the code to test the property unit
-        expect(instance).to.have.property('unit');
-        // expect(instance.unit).to.be(expectedValueLiteral);
+      it('should have the property url (base name: "url")', function() {
+        // TODO: update the code to test the property url
+        expect(instance).to.have.property('url');
+        // expect(instance.url).to.be(expectedValueLiteral);
       });
 
-      it('should have the property value (base name: "value")', function() {
-        // TODO: update the code to test the property value
-        expect(instance).to.have.property('value');
-        // expect(instance.value).to.be(expectedValueLiteral);
+      it('should have the property user (base name: "user")', function() {
+        // TODO: update the code to test the property user
+        expect(instance).to.have.property('user');
+        // expect(instance.user).to.be(expectedValueLiteral);
       });
 
-      it('should have the property start (base name: "start")', function() {
-        // TODO: update the code to test the property start
-        expect(instance).to.have.property('start');
-        // expect(instance.start).to.be(expectedValueLiteral);
+      it('should have the property password (base name: "password")', function() {
+        // TODO: update the code to test the property password
+        expect(instance).to.have.property('password');
+        // expect(instance.password).to.be(expectedValueLiteral);
       });
 
     });

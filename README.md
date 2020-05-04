@@ -133,6 +133,8 @@ Class | Method | HTTP request | Description
 *Otpixel.KPIResourceApi* | [**createKPI**](docs/KPIResourceApi.md#createKPI) | **PUT** /kpis/create | Create a KPI
 *Otpixel.KPIResourceApi* | [**deleteKPI**](docs/KPIResourceApi.md#deleteKPI) | **DELETE** /kpis/delete/{id} | Delete a kpi
 *Otpixel.KPIResourceApi* | [**getKPIByID**](docs/KPIResourceApi.md#getKPIByID) | **GET** /kpis/get/{id} | Get a KPI by id
+*Otpixel.KPIResourceApi* | [**getKPIStatsByID**](docs/KPIResourceApi.md#getKPIStatsByID) | **GET** /kpis/get/{id}/stats | Get stats a KPI
+*Otpixel.KPIResourceApi* | [**getLastKPIByID**](docs/KPIResourceApi.md#getLastKPIByID) | **GET** /kpis/get/{id}/lastKPI | Get the last value of a KPI by id
 *Otpixel.KPIResourceApi* | [**listKPIs**](docs/KPIResourceApi.md#listKPIs) | **GET** /kpis/list | List all models
 *Otpixel.KPIResourceApi* | [**updateKPI**](docs/KPIResourceApi.md#updateKPI) | **POST** /kpis/update | Update a kpi
 *Otpixel.ModelResourceApi* | [**createModel**](docs/ModelResourceApi.md#createModel) | **PUT** /models/create | Create a model
@@ -154,6 +156,7 @@ Class | Method | HTTP request | Description
  - [Otpixel.ConnectorItem](docs/ConnectorItem.md)
  - [Otpixel.ConnectorOptionItem](docs/ConnectorOptionItem.md)
  - [Otpixel.DockerInfo](docs/DockerInfo.md)
+ - [Otpixel.DockerRepo](docs/DockerRepo.md)
  - [Otpixel.GeneralInfo](docs/GeneralInfo.md)
  - [Otpixel.InputItem](docs/InputItem.md)
  - [Otpixel.InputOptionItem](docs/InputOptionItem.md)
@@ -165,6 +168,7 @@ Class | Method | HTTP request | Description
  - [Otpixel.InstanceLoggingOptionItem](docs/InstanceLoggingOptionItem.md)
  - [Otpixel.InstanceOutputItem](docs/InstanceOutputItem.md)
  - [Otpixel.InstanceOutputOptionItem](docs/InstanceOutputOptionItem.md)
+ - [Otpixel.JsonNode](docs/JsonNode.md)
  - [Otpixel.KPI](docs/KPI.md)
  - [Otpixel.KpiThresholds](docs/KpiThresholds.md)
  - [Otpixel.LoggingItem](docs/LoggingItem.md)
